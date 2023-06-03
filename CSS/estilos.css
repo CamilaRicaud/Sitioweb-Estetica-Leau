@@ -7,7 +7,7 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color:rgb(243, 235, 235);
+    background-color:rgb(227, 216, 216);
 }
 h1{
     font-size: 3rem;
@@ -16,33 +16,45 @@ h2{
     font-size: 3rem;
     margin: 2rem;
     padding: 2rem;
+    text-align: center;
 }
 h3{
-    font-size: 1.8rem;
-    text-decoration: underline;
+    font-size: 2rem;
 }
 p{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 header{
-    background-image: url(../imagenes/fondo\ encabezado1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 20rem;
+    background-color: white;
+    height: 15rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 .logo{
     width: 14rem;
     height: 14rem;
-    margin-top: 2rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
+}
+.nav{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+ol{
+    list-style-type: disc;
+}
+ol li {
+    font-size: 1.5rem;
+
 }
 ul li{
     display: inline-block;
     padding: 1rem;
 }
 li a{
-    color: rgb(124, 180, 166);
+    color: black;
     text-decoration: none;
 }
 
@@ -79,38 +91,101 @@ li a{
 ul{
     list-style-type: none;
 }
-ol{
-    list-style-type: disc;
+.gridsttoscorporales{
+    display: grid;
+    grid-template-columns: 2fr 0.8fr;
+    grid-template-rows: 0.4fr 6fr;
+    grid-template-areas:
+    "titulo titulo"
+    "combos individuales";
 }
-ol li{
-    font-size: 2rem;
+.titulottocorp{
+    grid-area: titulo;
+    background-color:rgb(154, 182, 175) ;
 }
-.nav{
-    font-size: 2rem;
-    font-weight: bolder;
-    display: flex;
-    justify-content:start;
-    padding-left: 150px;
-
+.combosttocorp{
+    grid-area: combos;
 }
-
-.fondotto{
-    background-image: url(../imagenes/fondotto1.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-style: ridge;
+.individualesttocorp{
+    grid-area: individuales;
+    border-left: ridge;
+}
+.fondottocorp{
+    background-color:white;
+    border-style: double;
     text-align: center;
-    width: 28rem;
-    height: 35rem;
+    width: 25rem;
+    height: 20rem;
     padding: 1rem;
+    margin: 3rem;
+    padding-top: 2rem;
 }
+.fondottosindividuales{
+    text-align: center;
+    border-bottom: ridge;
+    border-top: ridge;
+    width: 25rem;
+    height: 10rem;
+}
+.gridsttosfaciales{
+    display: grid;
+    grid-template-rows: 0.5fr 4fr;
+    grid-template-areas:
+    "titulo"
+    "ttosfaciales";
+}
+.titulottofacial{
+    grid-area: titulo;
+    background-color:rgb(154, 182, 175)
+}
+.tratamientosfaciales{
+    grid-area: ttosfaciales;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.fondottofac{
+    background-color: white;
+    border-style: double;
+    text-align: center;
+    width: 25rem;
+    height: 27rem;
+    padding: 2rem;
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+.limpiezafacial{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.imagenfacial{
+    width: 500px;
+}
+.dermaplaning{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.imagendermaplaning{
+    width: 500px;
+}
+.iconoojo{
+    width:20px;
+}
+
 .tratamientoscorporales{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
 .galeria{
     display: flex;
     flex-flow: row wrap;
@@ -120,9 +195,6 @@ ol li{
 .galeria1{
     width: 500px;
     height: 500px;
-
-
-    
 }
 .galeria2{
     width: 500px;
@@ -182,11 +254,9 @@ input{
 }
 
 footer{
-    top: 100px;
     border-top: ridge;
+    height: 50px;
 }
-
-
 
 div a{
     color: black;
@@ -195,7 +265,7 @@ div a{
 footer p{
     text-align: center;
     font-size: 1.2rem;
-    height: 4rem;
+    padding-top: 1rem;
 }
 .arriba{
     color: black;
