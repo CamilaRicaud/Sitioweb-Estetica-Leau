@@ -7,7 +7,7 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color:rgb(227, 216, 216);
+    background-color:rgb(229, 209, 209);
 }
 h1{
     font-size: 3rem;
@@ -159,24 +159,78 @@ ul{
     justify-content: space-around;
 
 }
-.limpiezafacial{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.gridslimpiezafacial{
+    display: grid;
+    grid-template-rows: 0.1fr 0.5fr 2fr 2fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "volver imagen"
+    "titulo imagen"
+    "incluye imagen"
+    "beneficios imagen";
+}
+.volveratrasfacial{
+    grid-area: volver;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+.titulolimpiezafacial{
+    grid-area: titulo;
+    justify-items: center;
+}
+.incluyelimpiezafacial{
+    grid-area: incluye;
+    padding-left: 3rem;
+}
+.beneficioslimpiezafacial{
+    grid-area: beneficios;
+    padding-left: 3rem;
+}
+.imagenlimpiezafacial{
+    grid-area: imagen;
 }
 .imagenfacial{
-    width: 500px;
+    width: 50rem;
 }
-.dermaplaning{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.gridsdermaplaning{
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 0.1fr 0.5fr 1.5fr 1.5fr;
+    grid-template-areas:
+    "volver volver imagen"
+    "titulo titulo imagen"
+    "incluye incluye imagen"
+    "beneficios contraindicaciones imagen";
+}
+.volveratrasdermaplaning{
+    grid-area: volver;
+    padding-left: 2rem;
+    padding-top: 1rem;
+}
+.titulodermaplaning{
+    grid-area: titulo;
+}
+.incluyedermaplaning{
+    grid-area: incluye;
+    padding-left: 3rem;
+    padding-bottom: 1rem;
+}
+.beneficiosdermaplaning{
+    grid-area: beneficios;
+    padding-left: 3rem;
+}
+.contraindicacionesdermaplaning{
+    grid-area: contraindicaciones;
+    padding-left: 3rem;
+}
+.imagenesdermaplaning{
+    grid-area: imagen;
 }
 .imagendermaplaning{
-    width: 500px;
+    width: 550px;
 }
 .iconoojo{
-    width:20px;
+    width:2rem;
 }
 
 .tratamientoscorporales{
