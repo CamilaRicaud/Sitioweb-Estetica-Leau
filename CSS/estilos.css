@@ -7,7 +7,7 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color:rgb(229, 209, 209);
+    background-color:rgb(255, 219, 219);
 }
 h1{
     font-size: 3rem;
@@ -93,15 +93,15 @@ ul{
 }
 .gridsttoscorporales{
     display: grid;
-    grid-template-columns: 2fr 0.8fr;
+    grid-template-columns: 0.2fr 2fr 0.7fr;
     grid-template-rows: 0.4fr 6fr;
     grid-template-areas:
-    "titulo titulo"
-    "combos individuales";
+    "titulo titulo titulo"
+    ". combos individuales";
 }
 .titulottocorp{
     grid-area: titulo;
-    background-color:rgb(154, 182, 175) ;
+    background-color:rgb(188, 178, 178) ;
 }
 .combosttocorp{
     grid-area: combos;
@@ -136,7 +136,7 @@ ul{
 }
 .titulottofacial{
     grid-area: titulo;
-    background-color:rgb(154, 182, 175)
+    background-color:rgb(188, 178, 178);
 }
 .tratamientosfaciales{
     grid-area: ttosfaciales;
