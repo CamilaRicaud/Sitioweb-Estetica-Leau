@@ -36,7 +36,9 @@ header{
 .logo{
     width: 14rem;
     height: 14rem;
-    margin-left: 1rem;
+}
+.logo2{
+    width: 15rem;
 }
 .nav{
     font-size: 2rem;
@@ -343,7 +345,7 @@ footer p{
 
 }
 .iconowhatsapp2{
-    width: 60px;
+    width: 6rem;
     border-radius: 50%;
 }
 .whatsapp{
