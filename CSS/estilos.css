@@ -138,7 +138,7 @@ ul{
 }
 .titulottofacial{
     grid-area: titulo;
-    background-color:rgb(188, 178, 178);
+    background-color:rgb(188, 178, 178) ;
 }
 .tratamientosfaciales{
     grid-area: ttosfaciales;
@@ -241,38 +241,19 @@ ul{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
 .galeria{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
 }
-
-.galeria1{
+.carrusel{
     width: 500px;
-    height: 500px;
-}
-.galeria2{
-    width: 500px;
-    height: 500px;
-
-}
-.galeria3{
-    width: 500px;
-    height: 500px;
-
-}
-.galeria4{
-    width: 500px;
-    height: 500px;
-
 }
 .ubicacion{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
-
 .ubicacion1{
     background-image: url(../imagenes/ubicacion8.jpg);
     background-repeat: no-repeat;
@@ -281,7 +262,6 @@ ul{
     text-align: center;
     width: 300px;
     padding-top: 130px;
-
 }
 
 legend{
@@ -293,7 +273,6 @@ label{
 input{
     margin: 1rem;
 }
-
 
 .formulario{
     background-color: white;
