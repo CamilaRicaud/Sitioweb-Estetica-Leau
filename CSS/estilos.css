@@ -93,13 +93,20 @@ li a{
 ul{
     list-style-type: none;
 }
+.tratamientoscorporales{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
 .gridsttoscorporales{
     display: grid;
-    grid-template-columns: 0.2fr 2fr 0.7fr;
-    grid-template-rows: 0.4fr 6fr;
+    grid-template-columns: 0.3fr 2fr 0.7fr;
+    grid-template-rows: 0.4fr 6fr 0.1fr;
     grid-template-areas:
     "titulo titulo titulo"
-    ". combos individuales";
+    ". combos individuales"
+    ".arriba individuales";
 }
 .titulottocorp{
     grid-area: titulo;
@@ -112,15 +119,12 @@ ul{
     grid-area: individuales;
     border-left: ridge;
 }
-.fondottocorp{
-    background-color:white;
-    border-style: double;
-    text-align: center;
-    width: 25rem;
-    height: 20rem;
-    padding: 1rem;
-    margin: 3rem;
-    padding-top: 2rem;
+.volverarriba{
+    grid-area: arriba;
+}
+.arriba{
+    color: black;
+    margin-left: 6rem;
 }
 .fondottosindividuales{
     text-align: center;
@@ -148,19 +152,6 @@ ul{
     justify-content: space-evenly;
 }
 
-.fondottofac{
-    background-color: white;
-    border-style: double;
-    text-align: center;
-    width: 25rem;
-    height: 27rem;
-    padding: 2rem;
-    margin: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-}
 .gridslimpiezafacial{
     display: grid;
     grid-template-rows: 0.1fr 0.5fr 2fr 2fr;
@@ -235,12 +226,6 @@ ul{
     width:2rem;
 }
 
-.tratamientoscorporales{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
 .galeria{
     display: flex;
     flex-direction: row;
@@ -248,6 +233,7 @@ ul{
 }
 .carrusel{
     width: 500px;
+    height: 700px;
 }
 .ubicacion{
     display: flex;
@@ -301,10 +287,6 @@ footer p{
     text-align: center;
     font-size: 1.2rem;
     padding-top: 1rem;
-}
-.arriba{
-    color: black;
-    margin-left: 4rem;
 }
 .iconowhatsapp{
     width: 90px;
