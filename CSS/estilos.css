@@ -70,10 +70,6 @@ li a{
 }
 .headerhome{
     grid-area: header;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
 }
 .mainhome{
     grid-area: main;
@@ -87,7 +83,7 @@ li a{
     flex-direction: row;
     justify-content: end;
 }
-.footer1{
+.footerhome{
     grid-area: footer;
     height: 11rem; 
     background-color:rgb(154, 182, 175) ; 
@@ -104,14 +100,12 @@ li a{
     text-decoration: none;  
 }  
 .textoprincipal{   
-    text-align:center;  
-    width: 50rem;  
-    margin-top: 10rem;  
+    text-align:center;
+    margin-top: 15rem;  
 }  
 .imagenprincipal{  
     width: 60rem;  
-    height: 76rem;  
-    z-index: 1000;  
+    height: 76rem; 
 }
 
 @media screen and (max-width:768px){
@@ -153,12 +147,17 @@ li a{
 }
 .gridsttoscorporales{
     display: grid;
-    grid-template-columns:0.4fr 2fr 0.7fr;
-    grid-template-rows: 0.4fr 6fr 0.1fr;
+    grid-template-columns:0.3fr 2fr 0.7fr;
+    grid-template-rows: 0.4fr 0.4fr 7fr 0.1fr 0.1fr;
     grid-template-areas:
+    "header header header"
     "titulo titulo titulo"
     ". combos individuales"
-    ".arriba individuales";
+    ". arriba individuales"
+    "footer footer footer";
+}
+.headercorporales{
+    grid-area: header;
 }
 .titulottocorp{
     grid-area: titulo;
@@ -174,9 +173,49 @@ li a{
 .volverarriba{
     grid-area: arriba;
 }
+.footercorporales{
+    grid-area: footer;
+}
 .arriba{
     color: black;
     margin-left: 5rem;
+}
+@media screen and (max-width:768px){
+    .gridsttoscorporales{
+        grid-template-columns: 2fr 0.7fr;
+        grid-template-rows: 0.2fr 0.1fr 9fr 0.1fr 0.1fr;
+        grid-template-areas:
+        "header header"
+        "titulo titulo"
+        "combos individuales"
+        "arriba individuales"
+        "footer footer";
+    }
+    .headercorporales{
+        flex-direction: column;
+    }
+    .arriba{
+        margin-left: 13rem;
+    }
+}
+@media screen and (max-width:500px){
+    .gridsttoscorporales{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.1fr 9fr 0.5fr 0.1fr 0.1fr;
+        grid-template-areas:
+        "header"
+        "titulo"
+        "combos"
+        "individuales"
+        "arriba"
+        "footer";
+    }
+    .volverarriba{
+        text-align: start;
+    }
+    .individualesttocorp{
+        border-left: none;
+    }
 }
 .fondottosindividuales{
     text-align: center;
@@ -188,10 +227,16 @@ li a{
 
 .gridsttosfaciales{
     display: grid;
-    grid-template-rows: 0.5fr 4fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.5fr 3fr 0.1fr;
     grid-template-areas:
+    "header"
     "titulo"
-    "ttosfaciales";
+    "ttosfaciales"
+    "footer";
+}
+.headerfaciales{
+    grid-area: header;
 }
 .titulottofacial{
     grid-area: titulo;
@@ -204,16 +249,30 @@ li a{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+.footerfaciales{
+    grid-area: footer;
+}
+@media screen and (max-width:768px){
+    .headerfaciales{
+        flex-direction: column;
+    }
+}
+
 
 .gridslimpiezafacial{
     display: grid;
-    grid-template-rows: 0.1fr 0.5fr 2fr 2fr;
+    grid-template-rows: 0.4fr 0.5fr 1fr 1fr 0.1fr 0.1fr;
     grid-template-columns: 2fr 1fr;
     grid-template-areas:
-    "volver imagen"
+    "header header"
     "titulo imagen"
     "incluye imagen"
-    "beneficios imagen";
+    "beneficios imagen"
+    "volver imagen"
+    "footer footer";
+}
+.headerlimpiezafacial{
+    grid-area: header;
 }
 .volveratrasfacial{
     grid-area: volver;
@@ -235,18 +294,26 @@ li a{
 .imagenlimpiezafacial{
     grid-area: imagen;
 }
+.footerlimpiezafacial{
+    grid-area: footer;
+}
 .imagenfacial{
     width: 50rem;
 }
 .gridsdermaplaning{
     display: grid;
     grid-template-columns: 2fr 2fr 1fr;
-    grid-template-rows: 0.1fr 0.5fr 1.5fr 1.5fr;
+    grid-template-rows: 0.4fr 0.1fr 0.5fr 1fr 0.1fr 0.1fr;
     grid-template-areas:
-    "volver volver imagen"
+    "header header header"
     "titulo titulo imagen"
     "incluye incluye imagen"
-    "beneficios contraindicaciones imagen";
+    "beneficios contraindicaciones imagen"
+    "volver volver imagen"
+    "footer footer footer";
+}
+.headerdermaplaning{
+    grid-area: header;
 }
 .volveratrasdermaplaning{
     grid-area: volver;
@@ -272,13 +339,12 @@ li a{
 .imagenesdermaplaning{
     grid-area: imagen;
 }
+.footerdermaplaning{
+    grid-area: footer;
+}
 .imagendermaplaning{
     width: 55rem;
 }
-.iconoojo{
-    width:2rem;
-}
-
 .galeria{
     display: flex;
     flex-direction: row;
@@ -301,16 +367,6 @@ li a{
     text-align: center;
     width: 30rem;
     padding-top: 13rem;
-}
-@media screen and (max-width: 768px){
-    .carrusel{
-        width: 40rem;
-        height: 60rem;
-    }
-    .ubicacion{
-        flex-direction: column;
-        align-items: center;
-    }
 }
 
 legend{
