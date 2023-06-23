@@ -74,7 +74,6 @@ li a{
 }
 a{
     color: black;
-    text-decoration: none;
 }
 .gridshome{
     display: grid;
@@ -138,7 +137,12 @@ a{
         justify-content: center;
     }
     .imagenprincipal{
-        width: 100%;
+        width: 55rem;  
+        height: 66rem;
+        padding-top: 2rem;
+    }
+    .textoprincipal{
+        margin-top: 5rem;
     }
     .headerhome{
         flex-direction: column;
@@ -248,6 +252,7 @@ border-bottom: ridge ;
 @media screen and (max-width:500px){
     .gridsttoscorporales{
         grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.2fr 5fr 0.8fr 0.1fr 0.1fr;
         grid-template-areas:
         "header"
         "titulo"
@@ -296,20 +301,21 @@ border-bottom: ridge ;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 3rem;
+    padding: 1rem;
 }
 .footerfaciales{
     grid-area: footer;
 }
 @media screen and (max-width:768px){
     .gridsttosfaciales{
-        grid-template-columns: 1fr;
+        grid-template-columns: 0.2fr 2fr 0.2fr;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 2fr 0.1fr;
         grid-template-areas:
-        "header"
-        "titulo"
-        "main"
-        "ttosfaciales"
-        "footer";
+        "header header header"
+        ". titulo ."
+        ". main ."
+        ". ttosfaciales ."
+        ". footer .";
     }
     .headerfaciales{
         flex-direction: column;
@@ -461,14 +467,14 @@ border-bottom: ridge ;
 }
 @media screen and (max-width:768px){
     .gridsnuestroespacio{
-        grid-template-columns: 1fr;
+        grid-template-columns: 0.2fr 2fr 0.2fr;
         grid-template-areas: 
-        "header"
-        "titulo"
-        "galeria"
-        "ubicacion"
-        "mapa"
-        "footer";
+        "header header header"
+        ". titulo ."
+        ". galeria ."
+        ". ubicacion ."
+        ". mapa ."
+        ". footer .";
     }
     .ubicacion1{
         display: none;
@@ -506,6 +512,9 @@ border-bottom: ridge ;
 }
 .maincontacto{
     grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .formulario{
     grid-area: formulario;
@@ -527,6 +536,32 @@ legend{
 }
 .opinion2{
     font-family: 'Oooh Baby', cursive;
+}
+@media screen and (max-width:768px){
+    .opinion1{
+        font-size: 2.3rem;
+    }
+    .opinion2{
+        font-size: 2rem;
+    }
+    .headercontacto{
+        flex-direction: column;
+    }
+    .gridscontacto{
+        grid-template-rows: 0.2fr 0.2fr 2fr 0.1fr;
+    }
+}
+@media screen and (max-width:500px){
+    .gridscontacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.2fr 1fr 1fr 0.1fr;
+        grid-template-areas: 
+        "header"
+        "titulo"
+        "main"
+        "formulario"
+        "footer";
+    }
 }
 footer{
     border-top: solid 0.1rem;
