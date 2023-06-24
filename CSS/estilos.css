@@ -78,7 +78,7 @@ a{
 .gridshome{
     display: grid;
     grid-template-columns: 1fr 0.5fr;
-    grid-template-rows: 0.5fr 3fr 0.1fr;
+    grid-template-rows: 0.1fr 3fr 0.1fr;
     grid-template-areas: 
     "header header"
     "main imagen"
@@ -111,7 +111,7 @@ a{
     font-family: 'Oooh Baby', cursive;  
     font-size: 10rem;  
 }  
-.subtitulo{  
+.subtitulo2{  
     font-family: 'Oooh Baby', cursive;    
 }  
 .textoprincipal{   
@@ -176,6 +176,7 @@ a{
     ". arriba arriba ."
     ". footer footer .";
 }
+
 .headercorporales{
     grid-area: header;
 }
