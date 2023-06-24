@@ -321,6 +321,17 @@ border-bottom: ridge ;
         flex-direction: column;
     }
 }
+@media screen and (max-width:500px){
+    .gridsttosfaciales{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "titulo"
+        "main"
+        "ttosfaciales"
+        "footer";
+    }
+}
 
 
 .gridslimpiezafacial{
