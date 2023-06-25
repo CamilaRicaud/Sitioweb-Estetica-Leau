@@ -1,0 +1,61 @@
+
+
+.gridsttosfaciales{
+    display: grid;
+    grid-template-columns: 0.2fr 3fr 0.2fr;
+    grid-template-rows: 0.2fr 0.2fr 1fr 2fr 0.1fr;
+    grid-template-areas:
+    "header header header"
+    ". titulo ."
+    ". main ."
+    ". ttosfaciales ."
+    ". footer .";
+    .headerfaciales{
+        grid-area: header;
+    }
+    .titulottofacial{
+        grid-area: titulo;
+        border-bottom: solid 0.1rem ;
+    }
+    .mainfaciales{
+        grid-area: main;
+        text-align: center;
+        border-bottom: solid 0.1rem;
+        padding: 5rem;
+    }
+    .tratamientosfaciales{
+        grid-area: ttosfaciales;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 1rem;
+    }
+    .footerfaciales{
+        grid-area: footer;
+    }
+}
+
+@media screen and (max-width:768px){
+    .gridsttosfaciales{
+        grid-template-columns: 0.2fr 2fr 0.2fr;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr 2fr 0.1fr;
+        grid-template-areas:
+        "header header header"
+        ". titulo ."
+        ". main ."
+        ". ttosfaciales ."
+        ". footer .";
+    }
+}
+@media screen and (max-width:500px){
+    .gridsttosfaciales{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "titulo"
+        "main"
+        "ttosfaciales"
+        "footer";
+    }
+}

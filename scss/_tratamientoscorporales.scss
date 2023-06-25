@@ -1,0 +1,109 @@
+
+
+.gridstratamientoscorporales{
+    display: grid;
+    grid-template-columns:0.2fr 0.7fr 2fr  0.2fr;
+    grid-template-rows: 0.2fr 0.2fr 0.3fr 5fr 2fr 0.1fr 0.1fr;
+    grid-template-areas:
+    "header header header header"
+    ". titulo titulo ."
+    ". main main ."
+    ". individuales combos ."
+    ". descripcion descripcion ."
+    ". arriba arriba ."
+    ". footer footer .";
+
+    .headercorporales{
+        grid-area: header;
+    }
+    .titulotratamientoscorp{
+        grid-area: titulo;
+        border-bottom: solid 0.1rem;
+    }
+    .maincorporales{
+        grid-area: main;
+        border-bottom: solid 0.1rem;
+        padding: 5rem;
+        text-align: center;
+    }
+    .combostratamientoscorp{
+        grid-area: combos;
+    }
+    .individualestratamientoscorp{
+        grid-area: individuales;
+        border-right: solid 0.1rem;
+    }
+    .beneficioscorporales{
+        grid-area: descripcion;
+        border-top: solid 0.1rem;
+        text-align: center;
+        padding-top: 2rem;
+    }
+    .volverarriba{
+        grid-area: arriba;
+        text-align: center;
+        padding-top: 1rem;
+    }
+    .footercorporales{
+        grid-area: footer;
+    }
+}
+
+.tratamientoscorporales{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+.fondottosindividuales{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: solid 0.1rem;
+    width: 25rem;
+    height: 16rem;
+}
+.arriba{
+    color: black;
+}
+.promo{
+border-bottom: ridge ;
+}
+@media screen and (max-width:768px){
+    .gridstratamientoscorporales{
+        grid-template-columns:0.2fr 0.7fr 2fr  0.2fr;
+        grid-template-rows: 0.2fr 0.2fr 0.3fr 5fr 2fr 0.1fr 0.1fr;
+        grid-template-areas:
+        "header header header header"
+        ". titulo titulo ."
+        ". main main ."
+        "individuales individuales combos combos"
+        ". descripcion descripcion ."
+        ". arriba arriba ."
+        ". footer footer .";
+    }
+}
+@media screen and (max-width:500px){
+    .gridstratamientoscorporales{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.2fr 6fr 1fr 0.1fr 0.1fr;
+        grid-template-areas:
+        "header"
+        "titulo"
+        "main"
+        "combos"
+        "individuales"
+        "descripcion"
+        "arriba"
+        "footer";
+    }
+    .individualestratamientoscorp{
+        border-right: none;
+    }
+    .combostratamientoscorp{
+        border-bottom: solid 0.1rem;
+    }
+}

@@ -1,0 +1,95 @@
+
+
+.gridslimpiezafacial{
+    display: grid;
+    grid-template-rows: 0.4fr 0.4fr 1fr 1fr 0.1fr 0.1fr;
+    grid-template-columns: 0.3fr 2fr 1fr 0.3fr;
+    grid-template-areas:
+    "header header header header"
+    ". titulo titulo ."
+    ". incluye imagen ."
+    ". beneficios imagen ."
+    ". volver imagen ."
+    ". footer footer .";
+    .headerlimpiezafacial{
+        grid-area: header;
+    }
+    .titulolimpiezafacial{
+        grid-area: titulo;
+        justify-items: center;
+        border-bottom: solid 0.1rem;
+    }
+    .incluyelimpiezafacial{
+        grid-area: incluye;
+        padding-left: 3rem;
+        padding-top: 3rem;
+    }
+    .beneficioslimpiezafacial{
+        grid-area: beneficios;
+        padding-left: 3rem;
+    }
+    .imagenlimpiezafacial{
+        grid-area: imagen;
+    }
+    .volveratrasfacial{
+        grid-area: volver;
+    }
+    .footerlimpiezafacial{
+        grid-area: footer;
+    }
+}
+
+.imagenfacial{
+    width: 50rem;
+}
+
+@media screen and (max-width:768px){
+    .gridslimpiezafacial{
+        grid-template-rows: 0.2fr 0.2fr 0.7fr 1fr 0.1fr 0.1fr;
+        grid-template-columns: 0.3fr 1.5fr 1.5fr 0.3fr;
+        grid-template-areas:
+        "header header header header"
+        ". titulo titulo ."
+        ". incluye beneficios ."
+        ". imagen imagen ."
+        ". volver volver ."
+        ". footer footer .";
+    }
+    .imagenlimpiezafacial{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .beneficioslimpiezafacial{
+        padding-top: 3rem;
+        border-bottom: solid 0.1rem;
+    }
+    .volveratrasfacial{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .incluyelimpiezafacial{
+        border-bottom: solid 0.1rem;
+    }
+}
+@media screen and (max-width:500px){
+    .gridslimpiezafacial{
+        grid-template-rows: 0.1fr 0.1fr 1.5fr 2fr 0.1fr 0.1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "header header"
+        "titulo titulo"
+        "incluye beneficios"
+        "imagen imagen"
+        "volver volver"
+        "footer footer";
+    }
+    .imagenfacial{
+        width: 35rem;
+        height: 40rem;
+    }
+    .imagenlimpiezafacial{
+        align-items: center;
+    }
+}

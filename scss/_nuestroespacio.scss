@@ -1,0 +1,83 @@
+
+
+.gridsnuestroespacio{
+    display: grid;
+    grid-template-columns: 0.2fr 1.5fr 1fr 0.2fr;
+    grid-template-rows: 0.2fr 0.2fr 1.5fr 0.2fr 1fr 0.1fr;
+    grid-template-areas: 
+    "header header header header"
+    ". titulo titulo ."
+    ". galeria galeria ."
+    ". ubicacion ubicacion ."
+    ". mapa mapa ."
+    ". footer footer .";
+    .headernuestroespacio{
+        grid-area: header;
+    }
+    .titulonuestroespacio{
+        grid-area: titulo;
+        border-bottom: solid 0.1rem;
+    }
+    
+    .galeria{
+        grid-area: galeria;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-bottom: solid 0.1rem;
+    }
+    .tituloubicacion{
+        grid-area: ubicacion;
+    }
+    .ubicacion{
+        grid-area: mapa;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .footernuestroespacio{
+        grid-area: footer;
+    }
+}
+
+.ubicacion1{
+    background-image: url(../imagenes/ubicacion8.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-align: center;
+    width: 30rem;
+    padding-top: 13rem;
+}
+
+.carrusel{
+    width: 50rem;
+    height: 70rem;
+    padding: 3rem;
+}
+@media screen and (max-width:768px){
+    .gridsnuestroespacio{
+        grid-template-columns: 0.2fr 2fr 0.2fr;
+        grid-template-areas: 
+        "header header header"
+        ". titulo ."
+        ". galeria ."
+        ". ubicacion ."
+        ". mapa ."
+        ". footer .";
+    }
+    .ubicacion1{
+        display: none;
+    }
+}
+@media screen and (max-width:500px){
+    .ubicacion2{
+        width: 40rem;
+    }
+    .carrusel{
+        width: 40rem;
+        height: 60rem;
+    }
+}

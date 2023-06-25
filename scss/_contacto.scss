@@ -1,0 +1,70 @@
+
+
+.gridscontacto{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+    grid-template-rows: 0.2fr 0.2fr 3fr 0.1fr;
+    grid-template-areas: 
+    "header header header header"
+    ". titulo titulo ."
+    ". main formulario ."
+    ". footer footer .";
+    .headercontacto{
+        grid-area: header;
+    }
+    .titulocontacto{
+        grid-area: titulo;
+        border-bottom: solid 0.1rem;
+    }
+    .maincontacto{
+        grid-area: main;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .formulario{
+        grid-area: formulario;
+        padding: 2rem;
+    }
+    .footercontacto{
+        grid-area: footer;
+    }
+}
+
+label{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+legend{
+    font-weight: bold;
+}
+.opinion1{
+    font-size: 3.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+.opinion2{
+    font-family: 'Oooh Baby', cursive;
+}
+@media screen and (max-width:768px){
+    .opinion1{
+        font-size: 2.3rem;
+    }
+    .opinion2{
+        font-size: 2rem;
+    }
+    .gridscontacto{
+        grid-template-rows: 0.2fr 0.2fr 2fr 0.1fr;
+    }
+}
+@media screen and (max-width:500px){
+    .gridscontacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 0.2fr 0.5fr 1fr 0.1fr;
+        grid-template-areas: 
+        "header"
+        "titulo"
+        "main"
+        "formulario"
+        "footer";
+    }
+}

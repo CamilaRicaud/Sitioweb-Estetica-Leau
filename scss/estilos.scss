@@ -1,0 +1,209 @@
+
+@import "variables";
+@import "tratamientoscorporales";
+@import "tratamientosfaciales";
+@import "nuestroespacio";
+@import "contacto";
+@import "limpiezaprofunda";
+@import "dermaplaning";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color:rgb(255, 219, 219);
+}
+
+h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 4rem;
+    text-align: center;
+}
+h2{
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 4rem;
+    text-align: center;
+}
+h3{
+    font-size: 2rem;
+}
+h4{
+    font-size: 2.1rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+h5{
+    font-size: 1.8rem;
+}
+p{
+    font-size: 1.3rem;
+}
+header{
+    background-color: white;
+}
+.logo{
+    width: 14rem;
+    height: 14rem;
+}
+
+ol{
+    list-style-type: disc;
+    li {
+        font-size: 1.5rem;
+        a{
+            color: black;
+            text-decoration: none;
+        }
+    
+    }
+}
+
+ul{
+    list-style-type: none;
+    li{
+        font-size: 2rem;
+        font-weight: bolder;
+        display: inline-block;
+        padding: 0.5rem;
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        &:hover{
+            background-color: rgb(223, 239, 245);
+        }
+    }
+}
+
+a{
+    color: black;
+}
+
+.gridshome{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    grid-template-rows: 0.1fr 3fr 0.1fr;
+    grid-template-areas: 
+    "header header"
+    "main imagen"
+    "footer imagen";
+    .headerhome{
+        grid-area: header;
+    }
+    .mainhome{
+        grid-area: main;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .imagenhome{
+        grid-area: imagen;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+    .footerhome{
+        grid-area: footer;
+        height: 11rem;
+        display: flex; 
+        flex-direction: row; 
+        align-items: center;
+        justify-content: space-around;
+    } 
+}
+
+
+.textoprincipal{   
+    text-align:center;
+    margin-top: 15rem;
+    .titulo{  
+        font-family: 'Oooh Baby', cursive;  
+        font-size: 10rem;  
+    }
+    .subtitulo2{  
+        font-family: 'Oooh Baby', cursive;
+        font-size: 3.3rem;
+        font-weight: bold;    
+    }
+}
+.imagenprincipal{
+    width: 65rem;
+}  
+
+@media screen and (max-width:768px){
+    .gridshome{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 2fr 0.1fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        "imagen"
+        "footer";
+    }
+    .imagenprincipal{
+        width: 100%;
+    }
+    .textoprincipal{
+        margin-top: 5rem;
+    }
+    ul li{
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+}
+@media screen and (max-width:500px){
+    .gridshome{
+        grid-template-rows: 0.2fr 1fr 1fr 0.1fr;
+    }
+    .footerhome{
+        justify-content: space-between;
+    }
+    .imagenprincipal{
+        width: 50rem;
+        height:60rem;
+    }
+}
+
+footer{
+    border-top: solid 0.1rem;
+    p{
+        text-align: center;
+        font-size: 1.2rem;
+        padding-top: 1rem;
+    }
+}
+
+.iconowhatsapp{
+    width: $tamanioiconosredes;
+
+}
+.iconoinstagram{
+    width: $tamanioiconosredes;
+}
+.iconofacebook{
+    width: $tamanioiconosredes;
+}
+.iconoubicacion{
+    width: $tamanioiconosredes;
+
+}
+.whatsapp{
+    position: fixed;
+    bottom: 5rem;
+    right: 3rem;
+    .iconowhatsapp2{
+        width: 6rem;
+        border-radius: 50%;
+        &:hover{
+            width: 7rem;
+        }
+    }
+}

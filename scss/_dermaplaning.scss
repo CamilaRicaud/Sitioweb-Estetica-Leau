@@ -1,0 +1,95 @@
+
+
+.gridsdermaplaning{
+    display: grid;
+    grid-template-columns: 0.3fr 1.5fr 1.5fr 1fr 0.3fr;
+    grid-template-rows: 0.2fr 0.1fr 0.5fr 0.5fr 0.1fr 0.1fr;
+    grid-template-areas:
+    "header header header header header"
+    ". titulo titulo titulo ."
+    ". incluye incluye imagen ."
+    ". beneficios contraindicaciones imagen ."
+    ". volver volver imagen ."
+    ". footer footer footer .";
+    .headerdermaplaning{
+        grid-area: header;
+    }
+    .titulodermaplaning{
+        grid-area: titulo;
+        border-bottom: solid 0.1rem;
+    }
+    .incluyedermaplaning{
+        grid-area: incluye;
+        padding-left: 3rem;
+        padding-bottom: 1rem;
+        padding-top: 3rem;
+    }
+    .beneficiosdermaplaning{
+        grid-area: beneficios;
+        padding-left: 3rem;
+    }
+    .contraindicacionesdermaplaning{
+        grid-area: contraindicaciones;
+        padding-left: 3rem;
+    }
+    .imagenesdermaplaning{
+        grid-area: imagen;
+    }
+    .volveratrasdermaplaning{
+        grid-area: volver;
+    }
+    .footerdermaplaning{
+        grid-area: footer;
+    }
+}
+
+.imagendermaplaning{
+    width: 55rem;
+}
+@media screen and (max-width:768px){
+    .gridsdermaplaning{
+        grid-template-columns: 0.3fr 1.5fr 1.5fr 0.3fr;
+        grid-template-rows: 0.2fr 0.2fr 0.5fr 0.5fr 1fr 0.1fr 0.1fr;
+        grid-template-areas:
+        "header header header header "
+        ". titulo titulo ."
+        ". incluye incluye ."
+        ". beneficios contraindicaciones ."
+        ". imagen imagen ."
+        ". volver volver ."
+        ". footer footer .";
+    }
+    .beneficiosdermaplaning{
+        border-bottom: solid 0.1rem;
+    }
+    .contraindicacionesdermaplaning{
+        border-bottom: solid 0.1rem;
+    }
+    .imagenesdermaplaning{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .volveratrasdermaplaning{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:500px){
+    .gridsdermaplaning{
+        grid-template-columns:1.5fr 1.5fr;
+        grid-template-rows: 0.2fr 0.2fr 0.5fr 0.5fr 1fr 0.1fr 0.1fr;
+        grid-template-areas:
+        "header header"
+        "titulo titulo"
+        "incluye incluye"
+        "beneficios contraindicaciones"
+        "imagen imagen"
+        "volver volver"
+        "footer footer";
+    }
+    .imagendermaplaning{
+        width: 35rem;
+    }
+}
