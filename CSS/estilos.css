@@ -6,6 +6,9 @@
 }
 .gridstratamientoscorporales .headercorporales {
   grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .gridstratamientoscorporales .titulotratamientoscorp {
   grid-area: titulo;
@@ -66,24 +69,69 @@
   border-bottom: ridge;
 }
 
+.whatsapp {
+  position: fixed;
+  bottom: 5rem;
+  right: 3rem;
+}
+.whatsapp .iconowhatsapp2 {
+  width: 6rem;
+  border-radius: 50%;
+}
+.whatsapp .iconowhatsapp2:hover {
+  width: 7rem;
+}
+
 @media screen and (max-width: 768px) {
   .gridstratamientoscorporales {
     grid-template-columns: 0.2fr 0.7fr 2fr 0.2fr;
     grid-template-rows: 0.2fr 0.2fr 0.3fr 5fr 2fr 0.1fr 0.1fr;
     grid-template-areas: "header header header header" ". titulo titulo ." ". main main ." "individuales individuales combos combos" ". descripcion descripcion ." ". arriba arriba ." ". footer footer .";
   }
+  .gridstratamientoscorporales .headercorporales {
+    justify-content: space-between;
+    text-align: end;
+  }
+  .gridstratamientoscorporales h1 {
+    font-size: 3rem;
+  }
+  .gridstratamientoscorporales h2 {
+    font-size: 2rem;
+  }
+  .gridstratamientoscorporales h3 {
+    font-size: 1.7rem;
+  }
+  .gridstratamientoscorporales h4 {
+    font-size: 1.9rem;
+  }
+  .gridstratamientoscorporales .individualestratamientoscorp {
+    border-right: none;
+  }
+  .whatsapp {
+    bottom: 3rem;
+    right: 2rem;
+  }
+  .whatsapp .iconowhatsapp2 {
+    width: 4.5rem;
+  }
+  .whatsapp .iconowhatsapp2:hover {
+    width: 5.5rem;
+  }
 }
 @media screen and (max-width: 500px) {
   .gridstratamientoscorporales {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.1fr 0.2fr 6fr 1fr 0.1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.1fr 6.5fr 1fr 0.1fr 0.1fr;
     grid-template-areas: "header" "titulo" "main" "combos" "individuales" "descripcion" "arriba" "footer";
   }
-  .individualestratamientoscorp {
-    border-right: none;
+  .gridstratamientoscorporales h1 {
+    font-size: 2.5rem;
   }
-  .combostratamientoscorp {
-    border-bottom: solid 0.1rem;
+  .gridstratamientoscorporales h2 {
+    font-size: 2rem;
+  }
+  .gridstratamientoscorporales h4 {
+    font-size: 1.5rem;
   }
 }
 .gridsttosfaciales {
@@ -94,6 +142,9 @@
 }
 .gridsttosfaciales .headerfaciales {
   grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .gridsttosfaciales .titulottofacial {
   grid-area: titulo;
@@ -123,11 +174,36 @@
     grid-template-rows: 0.2fr 0.2fr 0.2fr 2fr 0.1fr;
     grid-template-areas: "header header header" ". titulo ." ". main ." ". ttosfaciales ." ". footer .";
   }
+  .gridsttosfaciales .headerfaciales {
+    justify-content: space-between;
+    text-align: end;
+  }
+  .gridsttosfaciales h1 {
+    font-size: 3rem;
+  }
+  .gridsttosfaciales h2 {
+    font-size: 2rem;
+  }
+  .gridsttosfaciales h3 {
+    font-size: 1.7rem;
+  }
+  .gridsttosfaciales h4 {
+    font-size: 1.9rem;
+  }
 }
 @media screen and (max-width: 500px) {
   .gridsttosfaciales {
     grid-template-columns: 1fr;
     grid-template-areas: "header" "titulo" "main" "ttosfaciales" "footer";
+  }
+  .gridsttosfaciales h1 {
+    font-size: 2.5rem;
+  }
+  .gridsttosfaciales h2 {
+    font-size: 2rem;
+  }
+  .gridsttosfaciales h4 {
+    font-size: 1.5rem;
   }
 }
 .gridsnuestroespacio {
@@ -138,6 +214,9 @@
 }
 .gridsnuestroespacio .headernuestroespacio {
   grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .gridsnuestroespacio .titulonuestroespacio {
   grid-area: titulo;
@@ -185,11 +264,27 @@
     grid-template-columns: 0.2fr 2fr 0.2fr;
     grid-template-areas: "header header header" ". titulo ." ". galeria ." ". ubicacion ." ". mapa ." ". footer .";
   }
+  .gridsnuestroespacio .headernuestroespacio {
+    justify-content: space-between;
+    text-align: end;
+  }
+  .gridsnuestroespacio h1 {
+    font-size: 3rem;
+  }
+  .gridsnuestroespacio h2 {
+    font-size: 3rem;
+  }
   .ubicacion1 {
     display: none;
   }
 }
 @media screen and (max-width: 500px) {
+  .gridsnuestroespacio h1 {
+    font-size: 2.5rem;
+  }
+  .gridsnuestroespacio h2 {
+    font-size: 2.5rem;
+  }
   .ubicacion2 {
     width: 40rem;
   }
@@ -206,6 +301,9 @@
 }
 .gridscontacto .headercontacto {
   grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .gridscontacto .titulocontacto {
   grid-area: titulo;
@@ -244,6 +342,13 @@ legend {
 }
 
 @media screen and (max-width: 768px) {
+  .gridscontacto .headercontacto {
+    justify-content: space-between;
+    text-align: end;
+  }
+  .gridscontacto h1 {
+    font-size: 3rem;
+  }
   .opinion1 {
     font-size: 2.3rem;
   }
@@ -257,8 +362,14 @@ legend {
 @media screen and (max-width: 500px) {
   .gridscontacto {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 0.2fr 0.5fr 1fr 0.1fr;
+    grid-template-rows: 0.2fr 0.1fr 0.5fr 1.5fr 0.1fr;
     grid-template-areas: "header" "titulo" "main" "formulario" "footer";
+  }
+  .gridscontacto h1 {
+    font-size: 2.5rem;
+  }
+  .gridscontacto h2 {
+    font-size: 2rem;
   }
 }
 .gridslimpiezafacial {
@@ -269,6 +380,9 @@ legend {
 }
 .gridslimpiezafacial .headerlimpiezafacial {
   grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .gridslimpiezafacial .titulolimpiezafacial {
   grid-area: titulo;
@@ -277,12 +391,10 @@ legend {
 }
 .gridslimpiezafacial .incluyelimpiezafacial {
   grid-area: incluye;
-  padding-left: 3rem;
-  padding-top: 3rem;
+  margin-top: 2rem;
 }
 .gridslimpiezafacial .beneficioslimpiezafacial {
   grid-area: beneficios;
-  padding-left: 3rem;
 }
 .gridslimpiezafacial .imagenlimpiezafacial {
   grid-area: imagen;
@@ -304,13 +416,30 @@ legend {
     grid-template-columns: 0.3fr 1.5fr 1.5fr 0.3fr;
     grid-template-areas: "header header header header" ". titulo titulo ." ". incluye beneficios ." ". imagen imagen ." ". volver volver ." ". footer footer .";
   }
+  .gridslimpiezafacial .headerlimpiezafacial {
+    justify-content: space-between;
+    text-align: end;
+  }
+  .gridslimpiezafacial h1 {
+    font-size: 3rem;
+  }
+  .gridslimpiezafacial h3 {
+    font-size: 1.7rem;
+  }
+  .gridslimpiezafacial li {
+    font-size: 1.4rem;
+  }
   .imagenlimpiezafacial {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
+  .incluyelimpiezafacial {
+    margin-left: 1rem;
+  }
   .beneficioslimpiezafacial {
-    padding-top: 3rem;
+    margin-top: 2rem;
+    margin-right: 1rem;
     border-bottom: solid 0.1rem;
   }
   .volveratrasfacial {
@@ -328,6 +457,15 @@ legend {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "header header" "titulo titulo" "incluye beneficios" "imagen imagen" "volver volver" "footer footer";
   }
+  .gridslimpiezafacial h1 {
+    font-size: 2.5rem;
+  }
+  .gridslimpiezafacial h3 {
+    font-size: 1.5rem;
+  }
+  .gridslimpiezafacial li {
+    font-size: 1rem;
+  }
   .imagenfacial {
     width: 35rem;
     height: 40rem;
@@ -344,6 +482,9 @@ legend {
 }
 .gridsdermaplaning .headerdermaplaning {
   grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .gridsdermaplaning .titulodermaplaning {
   grid-area: titulo;
@@ -383,6 +524,19 @@ legend {
     grid-template-rows: 0.2fr 0.2fr 0.5fr 0.5fr 1fr 0.1fr 0.1fr;
     grid-template-areas: "header header header header " ". titulo titulo ." ". incluye incluye ." ". beneficios contraindicaciones ." ". imagen imagen ." ". volver volver ." ". footer footer .";
   }
+  .gridsdermaplaning .headerdermaplaning {
+    justify-content: space-between;
+    text-align: end;
+  }
+  .gridsdermaplaning h1 {
+    font-size: 3rem;
+  }
+  .gridsdermaplaning h3 {
+    font-size: 1.7rem;
+  }
+  .gridsdermaplaning li {
+    font-size: 1.4rem;
+  }
   .beneficiosdermaplaning {
     border-bottom: solid 0.1rem;
   }
@@ -399,12 +553,24 @@ legend {
     flex-direction: row;
     justify-content: center;
   }
+  .imagendermaplaning {
+    width: 45rem;
+  }
 }
 @media screen and (max-width: 500px) {
   .gridsdermaplaning {
     grid-template-columns: 1.5fr 1.5fr;
     grid-template-rows: 0.2fr 0.2fr 0.5fr 0.5fr 1fr 0.1fr 0.1fr;
     grid-template-areas: "header header" "titulo titulo" "incluye incluye" "beneficios contraindicaciones" "imagen imagen" "volver volver" "footer footer";
+  }
+  .gridsdermaplaning h1 {
+    font-size: 2.5rem;
+  }
+  .gridsdermaplaning h3 {
+    font-size: 1.5rem;
+  }
+  .gridsdermaplaning li {
+    font-size: 1rem;
   }
   .imagendermaplaning {
     width: 35rem;
@@ -504,6 +670,9 @@ a {
 }
 .gridshome .headerhome {
   grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .gridshome .mainhome {
   grid-area: main;
@@ -515,7 +684,7 @@ a {
   grid-area: imagen;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: center;
 }
 .gridshome .footerhome {
   grid-area: footer;
@@ -544,44 +713,6 @@ a {
   width: 65rem;
 }
 
-@media screen and (max-width: 768px) {
-  .gridshome {
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr 2fr 0.1fr;
-    grid-template-areas: "header" "main" "imagen" "footer";
-  }
-  .imagenprincipal {
-    width: 100%;
-  }
-  .textoprincipal {
-    margin-top: 5rem;
-  }
-  ul li {
-    font-size: 1.5rem;
-    padding: 0.5rem;
-  }
-}
-@media screen and (max-width: 500px) {
-  .gridshome {
-    grid-template-rows: 0.2fr 1fr 1fr 0.1fr;
-  }
-  .footerhome {
-    justify-content: space-between;
-  }
-  .imagenprincipal {
-    width: 50rem;
-    height: 60rem;
-  }
-}
-footer {
-  border-top: solid 0.1rem;
-}
-footer p {
-  text-align: center;
-  font-size: 1.2rem;
-  padding-top: 1rem;
-}
-
 .iconowhatsapp {
   width: 9rem;
 }
@@ -598,17 +729,91 @@ footer p {
   width: 9rem;
 }
 
-.whatsapp {
-  position: fixed;
-  bottom: 5rem;
-  right: 3rem;
+@media screen and (max-width: 768px) {
+  .gridshome {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 2fr 0.1fr;
+    grid-template-areas: "header" "main" "imagen" "footer";
+  }
+  .gridshome .headerhome {
+    justify-content: space-between;
+    text-align: end;
+  }
+  .imagenprincipal {
+    width: 50rem;
+    height: 60rem;
+  }
+  .imagenhome {
+    align-items: center;
+  }
+  .textoprincipal {
+    margin-top: 3rem;
+    padding-bottom: 6rem;
+    border-bottom: solid 0.1rem;
+  }
+  .textoprincipal .titulo {
+    font-size: 8rem;
+  }
+  .textoprincipal .subtitulo2 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+  ul li {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
 }
-.whatsapp .iconowhatsapp2 {
-  width: 6rem;
-  border-radius: 50%;
+@media screen and (max-width: 500px) {
+  .gridshome {
+    grid-template-rows: 0.1fr 0.5fr 1.5fr 0.1fr;
+  }
+  .footerhome {
+    justify-content: space-between;
+  }
+  .logo {
+    width: 10rem;
+    height: 10rem;
+  }
+  ul li {
+    font-size: 1rem;
+    padding: 0.2rem;
+  }
+  .imagenprincipal {
+    width: 30rem;
+    height: 40rem;
+  }
+  .iconowhatsapp {
+    width: 7rem;
+  }
+  .iconoinstagram {
+    width: 7rem;
+  }
+  .iconofacebook {
+    width: 7rem;
+  }
+  .iconoubicacion {
+    width: 7rem;
+  }
+  .textoprincipal .titulo {
+    font-size: 7.5rem;
+  }
+  .textoprincipal .subtitulo2 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
 }
-.whatsapp .iconowhatsapp2:hover {
-  width: 7rem;
+footer {
+  border-top: solid 0.1rem;
+}
+footer p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-top: 1rem;
 }
 
 /*# sourceMappingURL=estilos.css.map */

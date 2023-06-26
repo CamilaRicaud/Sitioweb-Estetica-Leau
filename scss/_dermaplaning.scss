@@ -13,6 +13,9 @@
     ". footer footer footer .";
     .headerdermaplaning{
         grid-area: header;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
     .titulodermaplaning{
         grid-area: titulo;
@@ -58,6 +61,19 @@
         ". imagen imagen ."
         ". volver volver ."
         ". footer footer .";
+        .headerdermaplaning{
+            justify-content: space-between;
+            text-align: end;
+        }
+        h1{
+            font-size: 3rem;
+        }
+        h3{
+            font-size: 1.7rem;
+        }
+        li{
+            font-size: 1.4rem;
+        }
     }
     .beneficiosdermaplaning{
         border-bottom: solid 0.1rem;
@@ -75,6 +91,9 @@
         flex-direction: row;
         justify-content: center;
     }
+    .imagendermaplaning{
+        width: 45rem;
+    }
 }
 @media screen and (max-width:500px){
     .gridsdermaplaning{
@@ -88,6 +107,15 @@
         "imagen imagen"
         "volver volver"
         "footer footer";
+        h1{
+            font-size: 2.5rem;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+        li{
+            font-size: 1rem;
+        }
     }
     .imagendermaplaning{
         width: 35rem;

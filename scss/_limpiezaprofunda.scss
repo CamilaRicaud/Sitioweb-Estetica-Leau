@@ -13,6 +13,9 @@
     ". footer footer .";
     .headerlimpiezafacial{
         grid-area: header;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
     .titulolimpiezafacial{
         grid-area: titulo;
@@ -21,12 +24,10 @@
     }
     .incluyelimpiezafacial{
         grid-area: incluye;
-        padding-left: 3rem;
-        padding-top: 3rem;
+        margin-top: 2rem;
     }
     .beneficioslimpiezafacial{
         grid-area: beneficios;
-        padding-left: 3rem;
     }
     .imagenlimpiezafacial{
         grid-area: imagen;
@@ -54,14 +55,31 @@
         ". imagen imagen ."
         ". volver volver ."
         ". footer footer .";
+        .headerlimpiezafacial{
+            justify-content: space-between;
+            text-align: end;
+        }
+        h1{
+            font-size: 3rem;
+        }
+        h3{
+            font-size: 1.7rem;
+        }
+        li{
+            font-size: 1.4rem;
+        }
     }
     .imagenlimpiezafacial{
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
+    .incluyelimpiezafacial{
+        margin-left: 1rem;
+    }
     .beneficioslimpiezafacial{
-        padding-top: 3rem;
+        margin-top: 2rem;
+        margin-right: 1rem;
         border-bottom: solid 0.1rem;
     }
     .volveratrasfacial{
@@ -84,6 +102,15 @@
         "imagen imagen"
         "volver volver"
         "footer footer";
+        h1{
+            font-size: 2.5rem;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+        li{
+            font-size: 1rem;
+        }
     }
     .imagenfacial{
         width: 35rem;
