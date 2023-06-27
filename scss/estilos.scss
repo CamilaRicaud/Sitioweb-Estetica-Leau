@@ -114,7 +114,6 @@ a{
     }
     .footerhome{
         grid-area: footer;
-        height: 11rem;
         display: flex; 
         flex-direction: row; 
         align-items: center;
@@ -166,7 +165,7 @@ a{
         "footer";
         .headerhome{
             justify-content: space-between;
-            text-align: end;
+            text-align: start;
         }
     }
     .imagenprincipal{

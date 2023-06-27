@@ -89,16 +89,17 @@ border-bottom: ridge ;
 }
 @media screen and (max-width:768px){
     .gridstratamientoscorporales{
-        grid-template-columns:0.2fr 0.7fr 2fr  0.2fr;
-        grid-template-rows: 0.2fr 0.2fr 0.3fr 5fr 2fr 0.1fr 0.1fr;
+        grid-template-columns:0.2fr 2fr  0.2fr;
+        grid-template-rows: 0.1fr 0.1fr 0.3fr 3.7fr 1fr 1.5fr 0.1fr 0.1fr;
         grid-template-areas:
-        "header header header header"
-        ". titulo titulo ."
-        ". main main ."
-        "individuales individuales combos combos"
-        ". descripcion descripcion ."
-        ". arriba arriba ."
-        ". footer footer .";
+        "header header header"
+        ". titulo ."
+        ". main ."
+        ". combos ."
+        ". individuales."
+        ". descripcion ."
+        ". arriba ."
+        ". footer .";
         .headercorporales{
             justify-content: space-between;
             text-align: end;
@@ -117,6 +118,7 @@ border-bottom: ridge ;
         }
         .individualestratamientoscorp{
             border-right: none;
+            border-top: solid 0.1rem;
         }
     }
     .whatsapp{
@@ -133,7 +135,7 @@ border-bottom: ridge ;
 @media screen and (max-width:500px){
     .gridstratamientoscorporales{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 0.1fr 0.1fr 6.5fr 1fr 0.1fr 0.1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.2fr 8.5fr 1.4fr 1.2fr 0.1fr 0.1fr;
         grid-template-areas:
         "header"
         "titulo"
