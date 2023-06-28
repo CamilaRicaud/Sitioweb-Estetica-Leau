@@ -85,6 +85,20 @@ ul{
 a{
     color: black;
 }
+footer{
+    border-top: solid 0.1rem;
+    p{
+        text-align: center;
+        font-size: 1.2rem;
+        padding-top: 1rem;
+    }
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
 
 .gridshome{
     display: grid;
@@ -96,62 +110,54 @@ a{
     "footer imagen";
     .headerhome{
         grid-area: header;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @extend .header;
     }
     .mainhome{
+        @include flex-row-center;
         grid-area: main;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        .textoprincipal{   
+            text-align:center;
+            margin-top: 15rem;
+            .titulo{  
+                font-family: 'Oooh Baby', cursive;  
+                font-size: 10rem;  
+            }
+            .subtitulo2{  
+                font-family: 'Oooh Baby', cursive;
+                font-size: 3.3rem;
+                font-weight: bold;    
+            }
+        }
     }
     .imagenhome{
         grid-area: imagen;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        @include flex-row-center;
+        .imagenprincipal{
+            width: 65rem;
+        }
     }
     .footerhome{
         grid-area: footer;
-        display: flex; 
-        flex-direction: row; 
+        @extend .header;
         align-items: center;
-        justify-content: space-around;
+        .iconowhatsapp{
+            width: $tamanioprincipalredes;
+        
+        }
+        .iconoinstagram{
+            width: $tamanioprincipalredes;
+        }
+        .iconofacebook{
+            width: $tamanioprincipalredes;
+        }
+        .iconoubicacion{
+            width: $tamanioprincipalredes;
+        
+        }
     } 
 }
 
 
-.textoprincipal{   
-    text-align:center;
-    margin-top: 15rem;
-    .titulo{  
-        font-family: 'Oooh Baby', cursive;  
-        font-size: 10rem;  
-    }
-    .subtitulo2{  
-        font-family: 'Oooh Baby', cursive;
-        font-size: 3.3rem;
-        font-weight: bold;    
-    }
-}
-.imagenprincipal{
-    width: 65rem;
-}
-.iconowhatsapp{
-    width: $tamanioprincipalredes;
-
-}
-.iconoinstagram{
-    width: $tamanioprincipalredes;
-}
-.iconofacebook{
-    width: $tamanioprincipalredes;
-}
-.iconoubicacion{
-    width: $tamanioprincipalredes;
-
-}
 
 
 @media screen and (max-width:768px){
@@ -242,13 +248,6 @@ a{
     }
 }
 
-footer{
-    border-top: solid 0.1rem;
-    p{
-        text-align: center;
-        font-size: 1.2rem;
-        padding-top: 1rem;
-    }
-}
+
 
 

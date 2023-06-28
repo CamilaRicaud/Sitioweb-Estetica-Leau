@@ -13,9 +13,7 @@
     ". footer footer .";
     .headerlimpiezafacial{
         grid-area: header;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @extend .header;
     }
     .titulolimpiezafacial{
         grid-area: titulo;
@@ -31,6 +29,9 @@
     }
     .imagenlimpiezafacial{
         grid-area: imagen;
+        .imagenfacial{
+            width: 50rem;
+        }
     }
     .volveratrasfacial{
         grid-area: volver;
@@ -40,9 +41,6 @@
     }
 }
 
-.imagenfacial{
-    width: 50rem;
-}
 
 @media screen and (max-width:768px){
     .gridslimpiezafacial{
@@ -57,7 +55,6 @@
         ". footer footer .";
         .headerlimpiezafacial{
             justify-content: space-between;
-            text-align: end;
         }
         h1{
             font-size: 3rem;
@@ -70,9 +67,7 @@
         }
     }
     .imagenlimpiezafacial{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        @include flex-row-center;
     }
     .incluyelimpiezafacial{
         margin-left: 1rem;
@@ -83,9 +78,7 @@
         border-bottom: solid 0.1rem;
     }
     .volveratrasfacial{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        @include flex-row-center;
     }
     .incluyelimpiezafacial{
         border-bottom: solid 0.1rem;

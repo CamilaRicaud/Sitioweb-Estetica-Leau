@@ -6,9 +6,6 @@
 }
 .gridstratamientoscorporales .headercorporales {
   grid-area: header;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 .gridstratamientoscorporales .titulotratamientoscorp {
   grid-area: titulo;
@@ -23,9 +20,31 @@
 .gridstratamientoscorporales .combostratamientoscorp {
   grid-area: combos;
 }
+.gridstratamientoscorporales .combostratamientoscorp .tratamientoscorporales {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+.gridstratamientoscorporales .combostratamientoscorp .tratamientoscorporales .promo {
+  border-bottom: ridge;
+}
 .gridstratamientoscorporales .individualestratamientoscorp {
   grid-area: individuales;
   border-right: solid 0.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.gridstratamientoscorporales .individualestratamientoscorp .fondottosindividuales {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-bottom: solid 0.1rem;
+  width: 25rem;
+  height: 16rem;
 }
 .gridstratamientoscorporales .beneficioscorporales {
   grid-area: descripcion;
@@ -42,31 +61,8 @@
   grid-area: footer;
 }
 
-.tratamientoscorporales {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 2rem;
-}
-
-.fondottosindividuales {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-bottom: solid 0.1rem;
-  width: 25rem;
-  height: 16rem;
-}
-
 .arriba {
   color: black;
-}
-
-.promo {
-  border-bottom: ridge;
 }
 
 .whatsapp {
@@ -90,7 +86,10 @@
   }
   .gridstratamientoscorporales .headercorporales {
     justify-content: space-between;
-    text-align: end;
+  }
+  .gridstratamientoscorporales .individualestratamientoscorp {
+    border-right: none;
+    border-top: solid 0.1rem;
   }
   .gridstratamientoscorporales h1 {
     font-size: 3rem;
@@ -103,20 +102,6 @@
   }
   .gridstratamientoscorporales h4 {
     font-size: 1.9rem;
-  }
-  .gridstratamientoscorporales .individualestratamientoscorp {
-    border-right: none;
-    border-top: solid 0.1rem;
-  }
-  .whatsapp {
-    bottom: 3rem;
-    right: 2rem;
-  }
-  .whatsapp .iconowhatsapp2 {
-    width: 4.5rem;
-  }
-  .whatsapp .iconowhatsapp2:hover {
-    width: 5.5rem;
   }
 }
 @media screen and (max-width: 500px) {
@@ -143,9 +128,6 @@
 }
 .gridsttosfaciales .headerfaciales {
   grid-area: header;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 .gridsttosfaciales .titulottofacial {
   grid-area: titulo;
@@ -177,7 +159,6 @@
   }
   .gridsttosfaciales .headerfaciales {
     justify-content: space-between;
-    text-align: end;
   }
   .gridsttosfaciales h1 {
     font-size: 3rem;
@@ -215,9 +196,6 @@
 }
 .gridsnuestroespacio .headernuestroespacio {
   grid-area: header;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 .gridsnuestroespacio .titulonuestroespacio {
   grid-area: titulo;
@@ -231,6 +209,11 @@
   align-items: center;
   border-bottom: solid 0.1rem;
 }
+.gridsnuestroespacio .galeria .carrusel {
+  width: 50rem;
+  height: 70rem;
+  padding: 3rem;
+}
 .gridsnuestroespacio .tituloubicacion {
   grid-area: ubicacion;
 }
@@ -240,11 +223,7 @@
   flex-direction: row;
   justify-content: space-around;
 }
-.gridsnuestroespacio .footernuestroespacio {
-  grid-area: footer;
-}
-
-.ubicacion1 {
+.gridsnuestroespacio .ubicacion .ubicacion1 {
   background-image: url(../imagenes/ubicacion8.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -253,11 +232,8 @@
   width: 30rem;
   padding-top: 13rem;
 }
-
-.carrusel {
-  width: 50rem;
-  height: 70rem;
-  padding: 3rem;
+.gridsnuestroespacio .footernuestroespacio {
+  grid-area: footer;
 }
 
 @media screen and (max-width: 768px) {
@@ -267,7 +243,6 @@
   }
   .gridsnuestroespacio .headernuestroespacio {
     justify-content: space-between;
-    text-align: end;
   }
   .gridsnuestroespacio h1 {
     font-size: 3rem;
@@ -302,9 +277,6 @@
 }
 .gridscontacto .headercontacto {
   grid-area: header;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 .gridscontacto .titulocontacto {
   grid-area: titulo;
@@ -316,36 +288,31 @@
   flex-direction: column;
   justify-content: center;
 }
+.gridscontacto .maincontacto .opinion1 {
+  font-size: 3.5rem;
+  font-family: "Raleway", sans-serif;
+}
+.gridscontacto .maincontacto .opinion2 {
+  font-family: "Oooh Baby", cursive;
+}
 .gridscontacto .formulario {
   grid-area: formulario;
   padding: 2rem;
+}
+.gridscontacto .formulario label {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.gridscontacto .formulario legend {
+  font-weight: bold;
 }
 .gridscontacto .footercontacto {
   grid-area: footer;
 }
 
-label {
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-legend {
-  font-weight: bold;
-}
-
-.opinion1 {
-  font-size: 3.5rem;
-  font-family: "Raleway", sans-serif;
-}
-
-.opinion2 {
-  font-family: "Oooh Baby", cursive;
-}
-
 @media screen and (max-width: 768px) {
   .gridscontacto .headercontacto {
     justify-content: space-between;
-    text-align: end;
   }
   .gridscontacto h1 {
     font-size: 3rem;
@@ -381,9 +348,6 @@ legend {
 }
 .gridslimpiezafacial .headerlimpiezafacial {
   grid-area: header;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 .gridslimpiezafacial .titulolimpiezafacial {
   grid-area: titulo;
@@ -400,15 +364,14 @@ legend {
 .gridslimpiezafacial .imagenlimpiezafacial {
   grid-area: imagen;
 }
+.gridslimpiezafacial .imagenlimpiezafacial .imagenfacial {
+  width: 50rem;
+}
 .gridslimpiezafacial .volveratrasfacial {
   grid-area: volver;
 }
 .gridslimpiezafacial .footerlimpiezafacial {
   grid-area: footer;
-}
-
-.imagenfacial {
-  width: 50rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -419,7 +382,6 @@ legend {
   }
   .gridslimpiezafacial .headerlimpiezafacial {
     justify-content: space-between;
-    text-align: end;
   }
   .gridslimpiezafacial h1 {
     font-size: 3rem;
@@ -483,9 +445,6 @@ legend {
 }
 .gridsdermaplaning .headerdermaplaning {
   grid-area: header;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 .gridsdermaplaning .titulodermaplaning {
   grid-area: titulo;
@@ -527,7 +486,6 @@ legend {
   }
   .gridsdermaplaning .headerdermaplaning {
     justify-content: space-between;
-    text-align: end;
   }
   .gridsdermaplaning h1 {
     font-size: 3rem;
@@ -663,6 +621,21 @@ a {
   color: black;
 }
 
+footer {
+  border-top: solid 0.1rem;
+}
+footer p {
+  text-align: center;
+  font-size: 1.2rem;
+  padding-top: 1rem;
+}
+
+.header, .gridshome .footerhome, .gridshome .headerhome, .gridstratamientoscorporales .headercorporales, .gridsttosfaciales .headerfaciales, .gridsnuestroespacio .headernuestroespacio, .gridscontacto .headercontacto, .gridslimpiezafacial .headerlimpiezafacial, .gridsdermaplaning .headerdermaplaning {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 .gridshome {
   display: grid;
   grid-template-columns: 1fr 0.5fr;
@@ -671,15 +644,25 @@ a {
 }
 .gridshome .headerhome {
   grid-area: header;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 .gridshome .mainhome {
-  grid-area: main;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  grid-area: main;
+}
+.gridshome .mainhome .textoprincipal {
+  text-align: center;
+  margin-top: 15rem;
+}
+.gridshome .mainhome .textoprincipal .titulo {
+  font-family: "Oooh Baby", cursive;
+  font-size: 10rem;
+}
+.gridshome .mainhome .textoprincipal .subtitulo2 {
+  font-family: "Oooh Baby", cursive;
+  font-size: 3.3rem;
+  font-weight: bold;
 }
 .gridshome .imagenhome {
   grid-area: imagen;
@@ -687,45 +670,23 @@ a {
   flex-direction: row;
   justify-content: center;
 }
-.gridshome .footerhome {
-  grid-area: footer;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.textoprincipal {
-  text-align: center;
-  margin-top: 15rem;
-}
-.textoprincipal .titulo {
-  font-family: "Oooh Baby", cursive;
-  font-size: 10rem;
-}
-.textoprincipal .subtitulo2 {
-  font-family: "Oooh Baby", cursive;
-  font-size: 3.3rem;
-  font-weight: bold;
-}
-
-.imagenprincipal {
+.gridshome .imagenhome .imagenprincipal {
   width: 65rem;
 }
-
-.iconowhatsapp {
+.gridshome .footerhome {
+  grid-area: footer;
+  align-items: center;
+}
+.gridshome .footerhome .iconowhatsapp {
   width: 9rem;
 }
-
-.iconoinstagram {
+.gridshome .footerhome .iconoinstagram {
   width: 9rem;
 }
-
-.iconofacebook {
+.gridshome .footerhome .iconofacebook {
   width: 9rem;
 }
-
-.iconoubicacion {
+.gridshome .footerhome .iconoubicacion {
   width: 9rem;
 }
 
@@ -806,14 +767,6 @@ a {
   h2 {
     font-size: 1.5rem;
   }
-}
-footer {
-  border-top: solid 0.1rem;
-}
-footer p {
-  text-align: center;
-  font-size: 1.2rem;
-  padding-top: 1rem;
 }
 
 /*# sourceMappingURL=estilos.css.map */

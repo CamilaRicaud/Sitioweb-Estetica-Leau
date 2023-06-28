@@ -15,9 +15,7 @@
 
     .headercorporales{
         grid-area: header;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        @extend .header;
     }
     .titulotratamientoscorp{
         grid-area: titulo;
@@ -31,10 +29,32 @@
     }
     .combostratamientoscorp{
         grid-area: combos;
+        .tratamientoscorporales{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 2rem;
+            .promo{
+                border-bottom: ridge ;
+                }
+        }
     }
     .individualestratamientoscorp{
         grid-area: individuales;
         border-right: solid 0.1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .fondottosindividuales{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            border-bottom: solid 0.1rem;
+            width: 25rem;
+            height: 16rem;
+        }
     }
     .beneficioscorporales{
         grid-area: descripcion;
@@ -52,28 +72,9 @@
     }
 }
 
-.tratamientoscorporales{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 2rem;
-}
-.fondottosindividuales{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-bottom: solid 0.1rem;
-    width: 25rem;
-    height: 16rem;
-}
+
 .arriba{
     color: black;
-}
-.promo{
-border-bottom: ridge ;
 }
 .whatsapp{
     position: fixed;
@@ -87,6 +88,7 @@ border-bottom: ridge ;
         }
     }
 }
+
 @media screen and (max-width:768px){
     .gridstratamientoscorporales{
         grid-template-columns:0.2fr 2fr  0.2fr;
@@ -102,7 +104,10 @@ border-bottom: ridge ;
         ". footer .";
         .headercorporales{
             justify-content: space-between;
-            text-align: end;
+        }
+        .individualestratamientoscorp{
+            border-right: none;
+            border-top: solid 0.1rem;
         }
         h1{
             font-size: 3rem;
@@ -116,22 +121,9 @@ border-bottom: ridge ;
         h4{
             font-size: 1.9rem;
         }
-        .individualestratamientoscorp{
-            border-right: none;
-            border-top: solid 0.1rem;
-        }
-    }
-    .whatsapp{
-        bottom: 3rem;
-        right: 2rem;
-        .iconowhatsapp2{
-            width: 4.5rem;
-            &:hover{
-                width: 5.5rem;
-            }
-        }
     }
 }
+
 @media screen and (max-width:500px){
     .gridstratamientoscorporales{
         grid-template-columns: 1fr;
