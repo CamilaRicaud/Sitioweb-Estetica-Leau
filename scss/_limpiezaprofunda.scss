@@ -14,10 +14,10 @@
     .headerlimpiezafacial{
         grid-area: header;
         @extend .header;
+        justify-content: space-around;
     }
     .titulolimpiezafacial{
         grid-area: titulo;
-        justify-items: center;
         border-bottom: solid 0.1rem;
     }
     .incluyelimpiezafacial{
@@ -29,9 +29,6 @@
     }
     .imagenlimpiezafacial{
         grid-area: imagen;
-        .imagenfacial{
-            width: 50rem;
-        }
     }
     .volveratrasfacial{
         grid-area: volver;
@@ -40,7 +37,9 @@
         grid-area: footer;
     }
 }
-
+.imagenfacial{
+    width: 50rem;
+}
 
 @media screen and (max-width:768px){
     .gridslimpiezafacial{

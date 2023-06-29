@@ -16,6 +16,7 @@
     .headercorporales{
         grid-area: header;
         @extend .header;
+        justify-content: space-around;
     }
     .titulotratamientoscorp{
         grid-area: titulo;
@@ -81,6 +82,10 @@
     bottom: 5rem;
     right: 3rem;
     .iconowhatsapp2{
+        animation-name: wpp;
+        animation-iteration-count: 3;
+        animation-timing-function: linear;
+        animation-duration: 2s;
         width: 6rem;
         border-radius: 50%;
         &:hover{
@@ -92,7 +97,7 @@
 @media screen and (max-width:768px){
     .gridstratamientoscorporales{
         grid-template-columns:0.2fr 2fr  0.2fr;
-        grid-template-rows: 0.1fr 0.1fr 0.3fr 3.7fr 1fr 1.5fr 0.1fr 0.1fr;
+        grid-template-rows: 0.1fr 0.1fr 0.3fr 2.3fr 1.2fr 1fr 0.1fr 0.1fr;
         grid-template-areas:
         "header header header"
         ". titulo ."

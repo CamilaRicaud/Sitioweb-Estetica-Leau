@@ -6,6 +6,7 @@
 }
 .gridstratamientoscorporales .headercorporales {
   grid-area: header;
+  justify-content: space-around;
 }
 .gridstratamientoscorporales .titulotratamientoscorp {
   grid-area: titulo;
@@ -71,6 +72,10 @@
   right: 3rem;
 }
 .whatsapp .iconowhatsapp2 {
+  animation-name: wpp;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+  animation-duration: 2s;
   width: 6rem;
   border-radius: 50%;
 }
@@ -81,7 +86,7 @@
 @media screen and (max-width: 768px) {
   .gridstratamientoscorporales {
     grid-template-columns: 0.2fr 2fr 0.2fr;
-    grid-template-rows: 0.1fr 0.1fr 0.3fr 3.7fr 1fr 1.5fr 0.1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.1fr 0.3fr 2.3fr 1.2fr 1fr 0.1fr 0.1fr;
     grid-template-areas: "header header header" ". titulo ." ". main ." ". combos ." ". individuales." ". descripcion ." ". arriba ." ". footer .";
   }
   .gridstratamientoscorporales .headercorporales {
@@ -128,6 +133,7 @@
 }
 .gridsttosfaciales .headerfaciales {
   grid-area: header;
+  justify-content: space-around;
 }
 .gridsttosfaciales .titulottofacial {
   grid-area: titulo;
@@ -191,11 +197,12 @@
 .gridsnuestroespacio {
   display: grid;
   grid-template-columns: 0.2fr 1.5fr 1fr 0.2fr;
-  grid-template-rows: 0.2fr 0.2fr 1.5fr 0.2fr 1fr 0.1fr;
+  grid-template-rows: 0.1fr 0.2fr 1.5fr 0.2fr 1fr 0.1fr;
   grid-template-areas: "header header header header" ". titulo titulo ." ". galeria galeria ." ". ubicacion ubicacion ." ". mapa mapa ." ". footer footer .";
 }
 .gridsnuestroespacio .headernuestroespacio {
   grid-area: header;
+  justify-content: space-around;
 }
 .gridsnuestroespacio .titulonuestroespacio {
   grid-area: titulo;
@@ -277,6 +284,7 @@
 }
 .gridscontacto .headercontacto {
   grid-area: header;
+  justify-content: space-around;
 }
 .gridscontacto .titulocontacto {
   grid-area: titulo;
@@ -288,11 +296,11 @@
   flex-direction: column;
   justify-content: center;
 }
-.gridscontacto .maincontacto .opinion1 {
+.gridscontacto .opinion1 {
   font-size: 3.5rem;
   font-family: "Raleway", sans-serif;
 }
-.gridscontacto .maincontacto .opinion2 {
+.gridscontacto .opinion2 {
   font-family: "Oooh Baby", cursive;
 }
 .gridscontacto .formulario {
@@ -311,20 +319,20 @@
 }
 
 @media screen and (max-width: 768px) {
+  .gridscontacto {
+    grid-template-rows: 0.2fr 0.2fr 2fr 0.1fr;
+  }
   .gridscontacto .headercontacto {
     justify-content: space-between;
   }
   .gridscontacto h1 {
     font-size: 3rem;
   }
-  .opinion1 {
-    font-size: 2.3rem;
+  .gridscontacto .opinion1 {
+    font-size: 2.5rem;
   }
-  .opinion2 {
+  .gridscontacto .opinion2 {
     font-size: 2rem;
-  }
-  .gridscontacto {
-    grid-template-rows: 0.2fr 0.2fr 2fr 0.1fr;
   }
 }
 @media screen and (max-width: 500px) {
@@ -348,10 +356,10 @@
 }
 .gridslimpiezafacial .headerlimpiezafacial {
   grid-area: header;
+  justify-content: space-around;
 }
 .gridslimpiezafacial .titulolimpiezafacial {
   grid-area: titulo;
-  justify-items: center;
   border-bottom: solid 0.1rem;
 }
 .gridslimpiezafacial .incluyelimpiezafacial {
@@ -364,14 +372,15 @@
 .gridslimpiezafacial .imagenlimpiezafacial {
   grid-area: imagen;
 }
-.gridslimpiezafacial .imagenlimpiezafacial .imagenfacial {
-  width: 50rem;
-}
 .gridslimpiezafacial .volveratrasfacial {
   grid-area: volver;
 }
 .gridslimpiezafacial .footerlimpiezafacial {
   grid-area: footer;
+}
+
+.imagenfacial {
+  width: 50rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -445,6 +454,7 @@
 }
 .gridsdermaplaning .headerdermaplaning {
   grid-area: header;
+  justify-content: space-around;
 }
 .gridsdermaplaning .titulodermaplaning {
   grid-area: titulo;
@@ -633,7 +643,6 @@ footer p {
 .header, .gridshome .footerhome, .gridshome .headerhome, .gridstratamientoscorporales .headercorporales, .gridsttosfaciales .headerfaciales, .gridsnuestroespacio .headernuestroespacio, .gridscontacto .headercontacto, .gridslimpiezafacial .headerlimpiezafacial, .gridsdermaplaning .headerdermaplaning {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
 
 .gridshome {
@@ -644,6 +653,7 @@ footer p {
 }
 .gridshome .headerhome {
   grid-area: header;
+  justify-content: space-around;
 }
 .gridshome .mainhome {
   display: flex;
@@ -655,11 +665,11 @@ footer p {
   text-align: center;
   margin-top: 15rem;
 }
-.gridshome .mainhome .textoprincipal .titulo {
+.gridshome .titulo {
   font-family: "Oooh Baby", cursive;
   font-size: 10rem;
 }
-.gridshome .mainhome .textoprincipal .subtitulo2 {
+.gridshome .subtitulo2 {
   font-family: "Oooh Baby", cursive;
   font-size: 3.3rem;
   font-weight: bold;
@@ -670,23 +680,28 @@ footer p {
   flex-direction: row;
   justify-content: center;
 }
-.gridshome .imagenhome .imagenprincipal {
+.gridshome .imagenprincipal {
   width: 65rem;
 }
 .gridshome .footerhome {
   grid-area: footer;
+  justify-content: space-around;
   align-items: center;
 }
-.gridshome .footerhome .iconowhatsapp {
+
+.iconowhatsapp {
   width: 9rem;
 }
-.gridshome .footerhome .iconoinstagram {
+
+.iconoinstagram {
   width: 9rem;
 }
-.gridshome .footerhome .iconofacebook {
+
+.iconofacebook {
   width: 9rem;
 }
-.gridshome .footerhome .iconoubicacion {
+
+.iconoubicacion {
   width: 9rem;
 }
 
@@ -700,12 +715,12 @@ footer p {
     justify-content: space-between;
     text-align: start;
   }
-  .imagenprincipal {
-    width: 50rem;
-    height: 60rem;
-  }
   .imagenhome {
     align-items: center;
+  }
+  .imagenhome .imagenprincipal {
+    width: 60rem;
+    height: 70rem;
   }
   .textoprincipal {
     margin-top: 3rem;
@@ -742,9 +757,12 @@ footer p {
     font-size: 1rem;
     padding: 0.2rem;
   }
-  .imagenprincipal {
-    width: 30rem;
-    height: 40rem;
+  .imagenhome {
+    align-items: center;
+  }
+  .imagenhome .imagenprincipal {
+    width: 40rem;
+    height: 50rem;
   }
   .iconowhatsapp {
     width: 6rem;
@@ -762,10 +780,21 @@ footer p {
     font-size: 7.5rem;
   }
   .textoprincipal .subtitulo2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
+  }
+}
+@keyframes wpp {
+  0% {
+    width: 6rem;
+  }
+  50% {
+    width: 7rem;
+  }
+  100% {
+    width: 6rem;
   }
 }
 

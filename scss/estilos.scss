@@ -96,7 +96,6 @@ footer{
 .header{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
 }
 
 
@@ -111,6 +110,7 @@ footer{
     .headerhome{
         grid-area: header;
         @extend .header;
+        justify-content: space-around;
     }
     .mainhome{
         @include flex-row-center;
@@ -118,45 +118,44 @@ footer{
         .textoprincipal{   
             text-align:center;
             margin-top: 15rem;
-            .titulo{  
-                font-family: 'Oooh Baby', cursive;  
-                font-size: 10rem;  
-            }
-            .subtitulo2{  
-                font-family: 'Oooh Baby', cursive;
-                font-size: 3.3rem;
-                font-weight: bold;    
-            }
         }
+    }
+    .titulo{  
+        font-family: 'Oooh Baby', cursive;  
+        font-size: 10rem;  
+    }
+    .subtitulo2{  
+        font-family: 'Oooh Baby', cursive;
+        font-size: 3.3rem;
+        font-weight: bold;    
     }
     .imagenhome{
         grid-area: imagen;
         @include flex-row-center;
-        .imagenprincipal{
-            width: 65rem;
-        }
+    }
+    .imagenprincipal{
+        width: 65rem;
     }
     .footerhome{
         grid-area: footer;
         @extend .header;
+        justify-content: space-around;
         align-items: center;
-        .iconowhatsapp{
-            width: $tamanioprincipalredes;
-        
-        }
-        .iconoinstagram{
-            width: $tamanioprincipalredes;
-        }
-        .iconofacebook{
-            width: $tamanioprincipalredes;
-        }
-        .iconoubicacion{
-            width: $tamanioprincipalredes;
-        
-        }
     } 
 }
+.iconowhatsapp{
+    width: $tamanioprincipalredes;
+}
+.iconoinstagram{
+    width: $tamanioprincipalredes;
+}
+.iconofacebook{
+    width: $tamanioprincipalredes;
+}
+.iconoubicacion{
+    width: $tamanioprincipalredes;
 
+}
 
 
 
@@ -174,12 +173,12 @@ footer{
             text-align: start;
         }
     }
-    .imagenprincipal{
-        width: 50rem;
-        height:60rem;
-    }
     .imagenhome{
         align-items: center;
+        .imagenprincipal{
+            width: 60rem;
+            height: 70rem;
+        }
     }
     .textoprincipal{   
         margin-top: 3rem;
@@ -217,9 +216,12 @@ footer{
         font-size: 1rem;
         padding: 0.2rem;
     }
-    .imagenprincipal{
-        width: 30rem;
-        height:40rem;
+    .imagenhome{
+        align-items: center;
+        .imagenprincipal{
+            width: 40rem;
+            height: 50rem;
+        }
     }
     .iconowhatsapp{
         width: $tamaniosecundarioredes;
@@ -235,19 +237,28 @@ footer{
         width: $tamaniosecundarioredes;
     
     }
-    .textoprincipal{   
+    .textoprincipal{
         .titulo{    
             font-size: 7.5rem;  
         }
         .subtitulo2{  
-            font-size: 1.5rem;    
+            font-size: 1.7rem;    
         }
     }
     h2{
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 }
 
-
-
+@keyframes wpp{
+    0% {
+        width: 6rem;
+    }
+    50% {
+        width: 7rem;
+    }
+    100% {
+        width: 6rem;
+    }
+}
 
