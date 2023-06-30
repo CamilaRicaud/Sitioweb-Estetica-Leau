@@ -16,7 +16,8 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color:rgb(255, 219, 219);
+    background-color: rgb(241, 218, 218);
+
 }
 
 h1{
@@ -49,8 +50,8 @@ header{
     background-color: white;
 }
 .logo{
-    width: 14rem;
-    height: 14rem;
+    width: 10rem;
+    height: 10rem;
 }
 
 ol{
@@ -106,7 +107,7 @@ footer{
     grid-template-areas: 
     "header header"
     "main imagen"
-    "footer imagen";
+    "footer footer";
     .headerhome{
         grid-area: header;
         @extend .header;
@@ -134,10 +135,11 @@ footer{
         @include flex-row-center;
     }
     .imagenprincipal{
-        width: 65rem;
+        width: 50rem;
     }
     .footerhome{
         grid-area: footer;
+        background-color: white;
         @extend .header;
         justify-content: space-around;
         align-items: center;

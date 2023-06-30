@@ -1,7 +1,7 @@
 .gridstratamientoscorporales {
   display: grid;
   grid-template-columns: 0.2fr 0.7fr 2fr 0.2fr;
-  grid-template-rows: 0.2fr 0.2fr 0.3fr 5fr 2fr 0.1fr 0.1fr;
+  grid-template-rows: 0.1fr 0.2fr 0.3fr 5fr 2fr 0.1fr 0.1fr;
   grid-template-areas: "header header header header" ". titulo titulo ." ". main main ." ". individuales combos ." ". descripcion descripcion ." ". arriba arriba ." ". footer footer .";
 }
 .gridstratamientoscorporales .headercorporales {
@@ -556,7 +556,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(255, 219, 219);
+  background-color: rgb(241, 218, 218);
 }
 
 h1 {
@@ -595,8 +595,8 @@ header {
 }
 
 .logo {
-  width: 14rem;
-  height: 14rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 ol {
@@ -649,7 +649,7 @@ footer p {
   display: grid;
   grid-template-columns: 1fr 0.5fr;
   grid-template-rows: 0.1fr 3fr 0.1fr;
-  grid-template-areas: "header header" "main imagen" "footer imagen";
+  grid-template-areas: "header header" "main imagen" "footer footer";
 }
 .gridshome .headerhome {
   grid-area: header;
@@ -681,10 +681,11 @@ footer p {
   justify-content: center;
 }
 .gridshome .imagenprincipal {
-  width: 65rem;
+  width: 50rem;
 }
 .gridshome .footerhome {
   grid-area: footer;
+  background-color: white;
   justify-content: space-around;
   align-items: center;
 }

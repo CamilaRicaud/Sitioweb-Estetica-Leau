@@ -3,7 +3,7 @@
 .gridstratamientoscorporales{
     display: grid;
     grid-template-columns:0.2fr 0.7fr 2fr  0.2fr;
-    grid-template-rows: 0.2fr 0.2fr 0.3fr 5fr 2fr 0.1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.2fr 0.3fr 5fr 2fr 0.1fr 0.1fr;
     grid-template-areas:
     "header header header header"
     ". titulo titulo ."
