@@ -16,7 +16,7 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(241, 218, 218);
+    background-color: rgb(232, 206, 181);
 
 }
 
@@ -44,10 +44,10 @@ h5{
     font-size: 1.8rem;
 }
 p{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 header{
-    background-color: white;
+    background-color:white;
 }
 .logo{
     width: 10rem;
@@ -73,21 +73,14 @@ ul{
         font-weight: bolder;
         display: inline-block;
         padding: 0.5rem;
-        a{
-            color: black;
-            text-decoration: none;
-        }
-        &:hover{
-            background-color: rgb(223, 239, 245);
-        }
     }
 }
-
 a{
     color: black;
 }
 footer{
     border-top: solid 0.1rem;
+    background-color: white;
     p{
         text-align: center;
         font-size: 1.2rem;
@@ -98,27 +91,33 @@ footer{
     display: flex;
     flex-direction: row;
 }
+.nav-link{
+    color: rgb(121, 158, 146);
+}
 
 
 .gridshome{
+    background-image: url(../imagenes/imangefondo3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: grid;
-    grid-template-columns: 1fr 0.5fr;
-    grid-template-rows: 0.1fr 3fr 0.1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 6fr 0.1fr;
     grid-template-areas: 
-    "header header"
-    "main imagen"
-    "footer footer";
+    "header"
+    "main"
+    "footer";
     .headerhome{
         grid-area: header;
         @extend .header;
         justify-content: space-around;
     }
     .mainhome{
-        @include flex-row-center;
         grid-area: main;
-        .textoprincipal{   
+        .textoprincipal{
             text-align:center;
-            margin-top: 15rem;
+            margin-top: 5rem;
         }
     }
     .titulo{  
@@ -132,30 +131,46 @@ footer{
     }
     .imagenhome{
         grid-area: imagen;
-        @include flex-row-center;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
     }
     .imagenprincipal{
-        width: 50rem;
+        width: 53rem;
     }
     .footerhome{
         grid-area: footer;
-        background-color: white;
-        @extend .header;
-        justify-content: space-around;
+        border-top: none;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        padding-top: 1rem;
+        .redeshome{
+            margin-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .copyrighthome{
+            text-align: center;
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+        }
     } 
 }
 .iconowhatsapp{
     width: $tamanioprincipalredes;
+    padding-right: 2rem;
 }
 .iconoinstagram{
     width: $tamanioprincipalredes;
+    padding-right: 2rem;
 }
 .iconofacebook{
     width: $tamanioprincipalredes;
+    padding-right: 2rem;
 }
 .iconoubicacion{
     width: $tamanioprincipalredes;
+    padding-right: 2rem;
 
 }
 
@@ -182,7 +197,6 @@ footer{
         }
     }
     .textoprincipal{   
-        margin-top: 3rem;
         padding-bottom: 6rem;
         border-bottom: solid 0.1rem;
         .titulo{    

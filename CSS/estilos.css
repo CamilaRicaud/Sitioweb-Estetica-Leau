@@ -76,7 +76,6 @@
   animation-iteration-count: 3;
   animation-timing-function: linear;
   animation-duration: 2s;
-  width: 6rem;
   border-radius: 50%;
 }
 .whatsapp .iconowhatsapp2:hover {
@@ -268,12 +267,12 @@
   .gridsnuestroespacio h2 {
     font-size: 2.5rem;
   }
-  .ubicacion2 {
-    width: 40rem;
-  }
-  .carrusel {
+  .gridsnuestroespacio .galeria .carrusel {
     width: 40rem;
     height: 60rem;
+  }
+  .ubicacion2 {
+    width: 38rem;
   }
 }
 .gridscontacto {
@@ -350,7 +349,7 @@
 }
 .gridslimpiezafacial {
   display: grid;
-  grid-template-rows: 0.4fr 0.4fr 1fr 1fr 0.1fr 0.1fr;
+  grid-template-rows: 0.2fr 0.4fr 1fr 1fr 0.1fr 0.1fr;
   grid-template-columns: 0.3fr 2fr 1fr 0.3fr;
   grid-template-areas: "header header header header" ". titulo titulo ." ". incluye imagen ." ". beneficios imagen ." ". volver imagen ." ". footer footer .";
 }
@@ -385,7 +384,7 @@
 
 @media screen and (max-width: 768px) {
   .gridslimpiezafacial {
-    grid-template-rows: 0.2fr 0.2fr 0.7fr 1fr 0.1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.2fr 0.7fr 1fr 0.1fr 0.1fr;
     grid-template-columns: 0.3fr 1.5fr 1.5fr 0.3fr;
     grid-template-areas: "header header header header" ". titulo titulo ." ". incluye beneficios ." ". imagen imagen ." ". volver volver ." ". footer footer .";
   }
@@ -449,7 +448,7 @@
 .gridsdermaplaning {
   display: grid;
   grid-template-columns: 0.3fr 1.5fr 1.5fr 1fr 0.3fr;
-  grid-template-rows: 0.2fr 0.1fr 0.5fr 0.5fr 0.1fr 0.1fr;
+  grid-template-rows: 0.1fr 0.1fr 0.5fr 0.5fr 0.1fr 0.1fr;
   grid-template-areas: "header header header header header" ". titulo titulo titulo ." ". incluye incluye imagen ." ". beneficios contraindicaciones imagen ." ". volver volver imagen ." ". footer footer footer .";
 }
 .gridsdermaplaning .headerdermaplaning {
@@ -491,7 +490,7 @@
 @media screen and (max-width: 768px) {
   .gridsdermaplaning {
     grid-template-columns: 0.3fr 1.5fr 1.5fr 0.3fr;
-    grid-template-rows: 0.2fr 0.2fr 0.5fr 0.5fr 1fr 0.1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.2fr 0.5fr 0.5fr 1fr 0.1fr 0.1fr;
     grid-template-areas: "header header header header " ". titulo titulo ." ". incluye incluye ." ". beneficios contraindicaciones ." ". imagen imagen ." ". volver volver ." ". footer footer .";
   }
   .gridsdermaplaning .headerdermaplaning {
@@ -556,7 +555,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(241, 218, 218);
+  background-color: rgb(232, 206, 181);
 }
 
 h1 {
@@ -587,7 +586,7 @@ h5 {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 header {
@@ -619,13 +618,6 @@ ul li {
   display: inline-block;
   padding: 0.5rem;
 }
-ul li a {
-  color: black;
-  text-decoration: none;
-}
-ul li:hover {
-  background-color: rgb(223, 239, 245);
-}
 
 a {
   color: black;
@@ -633,6 +625,7 @@ a {
 
 footer {
   border-top: solid 0.1rem;
+  background-color: white;
 }
 footer p {
   text-align: center;
@@ -640,30 +633,35 @@ footer p {
   padding-top: 1rem;
 }
 
-.header, .gridshome .footerhome, .gridshome .headerhome, .gridstratamientoscorporales .headercorporales, .gridsttosfaciales .headerfaciales, .gridsnuestroespacio .headernuestroespacio, .gridscontacto .headercontacto, .gridslimpiezafacial .headerlimpiezafacial, .gridsdermaplaning .headerdermaplaning {
+.header, .gridshome .headerhome, .gridstratamientoscorporales .headercorporales, .gridsttosfaciales .headerfaciales, .gridsnuestroespacio .headernuestroespacio, .gridscontacto .headercontacto, .gridslimpiezafacial .headerlimpiezafacial, .gridsdermaplaning .headerdermaplaning {
   display: flex;
   flex-direction: row;
 }
 
+.nav-link {
+  color: rgb(121, 158, 146);
+}
+
 .gridshome {
+  background-image: url(../imagenes/imangefondo3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
-  grid-template-rows: 0.1fr 3fr 0.1fr;
-  grid-template-areas: "header header" "main imagen" "footer footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 6fr 0.1fr;
+  grid-template-areas: "header" "main" "footer";
 }
 .gridshome .headerhome {
   grid-area: header;
   justify-content: space-around;
 }
 .gridshome .mainhome {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   grid-area: main;
 }
 .gridshome .mainhome .textoprincipal {
   text-align: center;
-  margin-top: 15rem;
+  margin-top: 5rem;
 }
 .gridshome .titulo {
   font-family: "Oooh Baby", cursive;
@@ -678,32 +676,47 @@ footer p {
   grid-area: imagen;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: end;
 }
 .gridshome .imagenprincipal {
-  width: 50rem;
+  width: 53rem;
 }
 .gridshome .footerhome {
   grid-area: footer;
-  background-color: white;
-  justify-content: space-around;
+  border-top: none;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  padding-top: 1rem;
+}
+.gridshome .footerhome .redeshome {
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+}
+.gridshome .footerhome .copyrighthome {
+  text-align: center;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 .iconowhatsapp {
-  width: 9rem;
+  width: 7rem;
+  padding-right: 2rem;
 }
 
 .iconoinstagram {
-  width: 9rem;
+  width: 7rem;
+  padding-right: 2rem;
 }
 
 .iconofacebook {
-  width: 9rem;
+  width: 7rem;
+  padding-right: 2rem;
 }
 
 .iconoubicacion {
-  width: 9rem;
+  width: 7rem;
+  padding-right: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -723,7 +736,6 @@ footer p {
     height: 70rem;
   }
   .textoprincipal {
-    margin-top: 3rem;
     padding-bottom: 6rem;
     border-bottom: solid 0.1rem;
   }
