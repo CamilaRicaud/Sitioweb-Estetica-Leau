@@ -1,23 +1,23 @@
 
 
 .gridsttosfaciales{
+    background-color: rgba(218, 202, 166, 0.2);
     display: grid;
     grid-template-columns: 0.2fr 3fr 0.2fr;
-    grid-template-rows: 0.2fr 0.2fr 1fr 2fr 0.1fr;
+    grid-template-rows: 0.2fr 0.3fr 1fr 2fr 0.1fr;
     grid-template-areas:
     "header header header"
     ". titulo ."
     ". main ."
     ". ttosfaciales ."
-    ". footer .";
+    "footer footer footer";
     .headerfaciales{
         grid-area: header;
         @extend .header;
-        justify-content: space-around;
     }
     .titulottofacial{
         grid-area: titulo;
-        border-bottom: solid 0.1rem ;
+        border-bottom: solid white 0.1rem ;
     }
     .mainfaciales{
         grid-area: main;
@@ -48,9 +48,6 @@
         ". main ."
         ". ttosfaciales ."
         ". footer .";
-        .headerfaciales{
-            justify-content: space-between;
-        }
         h1{
             font-size: 3rem;
         }

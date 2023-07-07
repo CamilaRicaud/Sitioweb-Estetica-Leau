@@ -7,6 +7,12 @@
 @import "limpiezaprofunda";
 @import "dermaplaning";
 
+@mixin shadow-size{
+    text-shadow: 0 0 0.2em rgb(255, 253, 253);
+    text-align: center;
+    padding: 2rem;
+    color: black;
+}
 *{
     margin: 0;
     padding: 0;
@@ -16,44 +22,43 @@ html{
 }
 body{
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(232, 206, 181);
-
+    background-image:url(../imagenes/imangefondo3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 h1{
+    @include shadow-size;
     font-size: 3.5rem;
-    font-weight: bold;
-    padding: 4rem;
-    text-align: center;
 }
+
 h2{
-    font-size: 3rem;
-    font-weight: bold;
-    padding: 4rem;
-    text-align: center;
+    @include shadow-size;
+    font-size: 3.5rem;
 }
 h3{
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-family: 'Raleway', sans-serif;
 }
 h4{
-    font-size: 2.1rem;
+    font-size: 2.3rem;
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    padding-bottom: 1rem;
 }
 
 h5{
     font-size: 1.8rem;
 }
 p{
-    font-size: 1.5rem;
-}
-header{
-    background-color:white;
+    font-size: 1.8rem;
 }
 .logo{
     width: 10rem;
     height: 10rem;
 }
-
 ol{
     list-style-type: disc;
     li {
@@ -79,28 +84,27 @@ a{
     color: black;
 }
 footer{
-    border-top: solid 0.1rem;
     background-color: white;
     p{
         text-align: center;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         padding-top: 1rem;
     }
 }
 .header{
     display: flex;
     flex-direction: row;
+    background-color:white;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 .nav-link{
     color: rgb(121, 158, 146);
 }
 
-
 .gridshome{
-    background-image: url(../imagenes/imangefondo3.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: rgba(218, 202, 166, 0.2);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 0.1fr 6fr 0.1fr;
@@ -111,104 +115,84 @@ footer{
     .headerhome{
         grid-area: header;
         @extend .header;
-        justify-content: space-around;
     }
     .mainhome{
         grid-area: main;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 10rem;
         .textoprincipal{
             text-align:center;
-            margin-top: 5rem;
+            color: rgb(0, 0, 0);
         }
     }
     .titulo{  
         font-family: 'Oooh Baby', cursive;  
-        font-size: 10rem;  
+        font-size: 15rem;
+        text-shadow: 0 0 0.2em rgb(255, 253, 253);  
     }
-    .subtitulo2{  
+    .subtitulo2{
+        font-size: 3rem;
+        padding: 2rem;
+        text-align: center;
+        text-shadow: 0 0 0.2em rgb(255, 255, 255);
+    }
+    .subtitulo3{  
         font-family: 'Oooh Baby', cursive;
-        font-size: 3.3rem;
-        font-weight: bold;    
-    }
-    .imagenhome{
-        grid-area: imagen;
-        display: flex;
-        flex-direction: row;
-        justify-content: end;
-    }
-    .imagenprincipal{
-        width: 53rem;
+        font-size: 4.2rem;
+        text-shadow: 0 0 0.2em rgb(255, 255, 255);      
     }
     .footerhome{
         grid-area: footer;
-        border-top: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 1rem;
         .redeshome{
-            margin-top: 1rem;
-            padding-bottom: 1rem;
-        }
-        .copyrighthome{
-            text-align: center;
-            padding-top: 0.2rem;
-            padding-bottom: 0.2rem;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            bottom: 25%;
+            right: 0rem;
         }
     } 
 }
-.iconowhatsapp{
+.iconosredes{
     width: $tamanioprincipalredes;
-    padding-right: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+.iconowhatsapp{
+    @extend .iconosredes;
 }
 .iconoinstagram{
-    width: $tamanioprincipalredes;
-    padding-right: 2rem;
+    @extend .iconosredes;
 }
 .iconofacebook{
-    width: $tamanioprincipalredes;
-    padding-right: 2rem;
+    @extend .iconosredes;
+
 }
 .iconoubicacion{
-    width: $tamanioprincipalredes;
-    padding-right: 2rem;
-
+    @extend .iconosredes;
 }
-
-
 
 @media screen and (max-width:768px){
     .gridshome{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.2fr 1fr 2fr 0.1fr;
+        grid-template-rows: auto;
         grid-template-areas: 
         "header"
         "main"
-        "imagen"
         "footer";
-        .headerhome{
-            justify-content: space-between;
-        }
-    }
-    .imagenhome{
-        align-items: center;
-        .imagenprincipal{
-            width: 60rem;
-            height: 70rem;
-        }
     }
     .textoprincipal{   
         padding-bottom: 6rem;
-        border-bottom: solid 0.1rem;
         .titulo{    
-            font-size: 8rem;  
+            font-size: 10rem;  
         }
-        .subtitulo2{  
-            font-size: 2rem;    
+        .subtitulo2{
+            font-size: 3rem;
         }
-    }
-    h2{
-        font-size: 2rem;
-        padding: 2rem;
+        .subtitulo3{  
+            font-size: 4rem;    
+        }
     }
     ul li{
         font-size: 1.5rem;
@@ -218,7 +202,7 @@ footer{
 }
 @media screen and (max-width:500px){
     .gridshome{
-        grid-template-rows: 0.1fr 0.5fr 1.5fr 0.1fr;
+        grid-template-rows: auto;
     }
     .footerhome{
         justify-content: space-between;
@@ -230,13 +214,6 @@ footer{
     ul li{
         font-size: 1rem;
         padding: 0.2rem;
-    }
-    .imagenhome{
-        align-items: center;
-        .imagenprincipal{
-            width: 40rem;
-            height: 50rem;
-        }
     }
     .iconowhatsapp{
         width: $tamaniosecundarioredes;
@@ -254,14 +231,20 @@ footer{
     }
     .textoprincipal{
         .titulo{    
-            font-size: 7.5rem;  
+            font-size: 8rem;  
         }
         .subtitulo2{  
-            font-size: 1.7rem;    
+            font-size: 2.5rem;    
+        }
+        .subtitulo3{
+            font-size: 3.5rem;
         }
     }
-    h2{
-        font-size: 1.7rem;
+    footer{
+        p{
+            font-size: 1.2rem;
+            padding-top: 0.5rem;
+        }
     }
 }
 

@@ -1,69 +1,66 @@
 .gridstratamientoscorporales {
+  background-color: rgba(218, 202, 166, 0.2);
   display: grid;
-  grid-template-columns: 0.2fr 0.7fr 2fr 0.2fr;
-  grid-template-rows: 0.1fr 0.2fr 0.3fr 5fr 2fr 0.1fr 0.1fr;
-  grid-template-areas: "header header header header" ". titulo titulo ." ". main main ." ". individuales combos ." ". descripcion descripcion ." ". arriba arriba ." ". footer footer .";
+  grid-template-columns: 0.2fr 2fr 0.2fr;
+  grid-template-rows: 0.1fr 0.2fr 10fr 0.2fr 3fr 0.1fr 0.1fr;
+  grid-template-areas: "header header header" ". titulo ." ". combos ." ". titulo2 ." ". individuales ." ". arriba ." "footer footer footer";
 }
 .gridstratamientoscorporales .headercorporales {
   grid-area: header;
-  justify-content: space-around;
 }
 .gridstratamientoscorporales .titulotratamientoscorp {
   grid-area: titulo;
-  border-bottom: solid 0.1rem;
+  border-bottom: solid white 0.1rem;
 }
 .gridstratamientoscorporales .maincorporales {
-  grid-area: main;
-  border-bottom: solid 0.1rem;
-  padding: 5rem;
-  text-align: center;
-}
-.gridstratamientoscorporales .combostratamientoscorp {
   grid-area: combos;
+  border-bottom: solid white 0.1rem;
 }
-.gridstratamientoscorporales .combostratamientoscorp .tratamientoscorporales {
+.gridstratamientoscorporales .tituloindividualescorp {
+  grid-area: titulo2;
+}
+.gridstratamientoscorporales .individualescorp {
+  grid-area: individuales;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  padding: 2rem;
-}
-.gridstratamientoscorporales .combostratamientoscorp .tratamientoscorporales .promo {
-  border-bottom: ridge;
-}
-.gridstratamientoscorporales .individualestratamientoscorp {
-  grid-area: individuales;
-  border-right: solid 0.1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.gridstratamientoscorporales .individualestratamientoscorp .fondottosindividuales {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  border-bottom: solid 0.1rem;
-  width: 25rem;
-  height: 16rem;
-}
-.gridstratamientoscorporales .beneficioscorporales {
-  grid-area: descripcion;
-  border-top: solid 0.1rem;
-  text-align: center;
-  padding-top: 2rem;
+  justify-content: space-around;
+  margin: 1rem;
 }
 .gridstratamientoscorporales .volverarriba {
   grid-area: arriba;
-  text-align: center;
-  padding-top: 1rem;
 }
 .gridstratamientoscorporales .footercorporales {
   grid-area: footer;
 }
 
+.fondotto {
+  background-color: rgba(61, 126, 126, 0.5);
+  color: white;
+  border: solid white 0.1rem;
+  text-align: left;
+  margin: 4rem;
+  padding: 4rem;
+}
+
+.fondottoindividuales {
+  background-color: rgba(61, 126, 126, 0.5);
+  color: white;
+  border: solid white 0.1rem;
+  text-align: center;
+  padding: 4rem;
+  width: 30rem;
+  height: 30rem;
+  margin: 2rem;
+}
+
 .arriba {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 2rem;
   color: black;
+  text-align: center;
 }
 
 .whatsapp {
@@ -72,24 +69,16 @@
   right: 3rem;
 }
 .whatsapp .iconowhatsapp2 {
-  animation-name: wpp;
-  animation-iteration-count: 3;
-  animation-timing-function: linear;
-  animation-duration: 2s;
+  width: 6rem;
   border-radius: 50%;
 }
-.whatsapp .iconowhatsapp2:hover {
+.whatsapp:hover {
   width: 7rem;
 }
 
 @media screen and (max-width: 768px) {
   .gridstratamientoscorporales {
-    grid-template-columns: 0.2fr 2fr 0.2fr;
-    grid-template-rows: 0.1fr 0.1fr 0.3fr 2.3fr 1.2fr 1fr 0.1fr 0.1fr;
-    grid-template-areas: "header header header" ". titulo ." ". main ." ". combos ." ". individuales." ". descripcion ." ". arriba ." ". footer .";
-  }
-  .gridstratamientoscorporales .headercorporales {
-    justify-content: space-between;
+    grid-template-rows: auto;
   }
   .gridstratamientoscorporales .individualestratamientoscorp {
     border-right: none;
@@ -99,44 +88,58 @@
     font-size: 3rem;
   }
   .gridstratamientoscorporales h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .gridstratamientoscorporales h3 {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
   .gridstratamientoscorporales h4 {
     font-size: 1.9rem;
+  }
+  .gridstratamientoscorporales p {
+    font-size: 1.5rem;
+  }
+  .fondottoindividuales {
+    width: 25rem;
+    height: 25rem;
   }
 }
 @media screen and (max-width: 500px) {
   .gridstratamientoscorporales {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.1fr 0.1fr 0.2fr 8.5fr 1.4fr 1.2fr 0.1fr 0.1fr;
-    grid-template-areas: "header" "titulo" "main" "combos" "individuales" "descripcion" "arriba" "footer";
   }
   .gridstratamientoscorporales h1 {
     font-size: 2.5rem;
   }
   .gridstratamientoscorporales h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+  }
+  .gridstratamientoscorporales h3 {
+    font-size: 1.8rem;
   }
   .gridstratamientoscorporales h4 {
     font-size: 1.5rem;
   }
+  .gridstratamientoscorporales p {
+    font-size: 1.2rem;
+  }
+  .gridstratamientoscorporales .arriba {
+    font-size: 1.5rem;
+  }
 }
 .gridsttosfaciales {
+  background-color: rgba(218, 202, 166, 0.2);
   display: grid;
   grid-template-columns: 0.2fr 3fr 0.2fr;
-  grid-template-rows: 0.2fr 0.2fr 1fr 2fr 0.1fr;
-  grid-template-areas: "header header header" ". titulo ." ". main ." ". ttosfaciales ." ". footer .";
+  grid-template-rows: 0.2fr 0.3fr 1fr 2fr 0.1fr;
+  grid-template-areas: "header header header" ". titulo ." ". main ." ". ttosfaciales ." "footer footer footer";
 }
 .gridsttosfaciales .headerfaciales {
   grid-area: header;
-  justify-content: space-around;
 }
 .gridsttosfaciales .titulottofacial {
   grid-area: titulo;
-  border-bottom: solid 0.1rem;
+  border-bottom: solid white 0.1rem;
 }
 .gridsttosfaciales .mainfaciales {
   grid-area: main;
@@ -161,9 +164,6 @@
     grid-template-columns: 0.2fr 2fr 0.2fr;
     grid-template-rows: 0.2fr 0.2fr 0.2fr 2fr 0.1fr;
     grid-template-areas: "header header header" ". titulo ." ". main ." ". ttosfaciales ." ". footer .";
-  }
-  .gridsttosfaciales .headerfaciales {
-    justify-content: space-between;
   }
   .gridsttosfaciales h1 {
     font-size: 3rem;
@@ -194,18 +194,18 @@
   }
 }
 .gridsnuestroespacio {
+  background-color: rgba(218, 202, 166, 0.2);
   display: grid;
   grid-template-columns: 0.2fr 1.5fr 1fr 0.2fr;
   grid-template-rows: 0.1fr 0.2fr 1.5fr 0.2fr 1fr 0.1fr;
-  grid-template-areas: "header header header header" ". titulo titulo ." ". galeria galeria ." ". ubicacion ubicacion ." ". mapa mapa ." ". footer footer .";
+  grid-template-areas: "header header header header" ". titulo titulo ." ". galeria galeria ." ". ubicacion ubicacion ." ". mapa mapa ." "footer footer footer footer";
 }
 .gridsnuestroespacio .headernuestroespacio {
   grid-area: header;
-  justify-content: space-around;
 }
 .gridsnuestroespacio .titulonuestroespacio {
   grid-area: titulo;
-  border-bottom: solid 0.1rem;
+  border-bottom: solid white 0.1rem;
 }
 .gridsnuestroespacio .galeria {
   grid-area: galeria;
@@ -213,7 +213,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-bottom: solid 0.1rem;
+  border-bottom: solid white 0.1rem;
 }
 .gridsnuestroespacio .galeria .carrusel {
   width: 50rem;
@@ -242,13 +242,15 @@
   grid-area: footer;
 }
 
+@media screen and (max-width: 1230px) {
+  .ubicacion1 {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .gridsnuestroespacio {
-    grid-template-columns: 0.2fr 2fr 0.2fr;
-    grid-template-areas: "header header header" ". titulo ." ". galeria ." ". ubicacion ." ". mapa ." ". footer .";
-  }
-  .gridsnuestroespacio .headernuestroespacio {
-    justify-content: space-between;
+    grid-template-columns: 0.1fr 2fr 0.1fr;
+    grid-template-areas: "header header header" ". titulo ." ". galeria ." ". ubicacion ." ". mapa ." "footer footer footer";
   }
   .gridsnuestroespacio h1 {
     font-size: 3rem;
@@ -256,11 +258,18 @@
   .gridsnuestroespacio h2 {
     font-size: 3rem;
   }
-  .ubicacion1 {
-    display: none;
+  .gridsnuestroespacio .galeria .carrusel {
+    width: 45rem;
+    height: 65rem;
+  }
+  .ubicacion2 {
+    width: 45rem;
   }
 }
 @media screen and (max-width: 500px) {
+  .gridsnuestroespacio {
+    grid-template-rows: auto;
+  }
   .gridsnuestroespacio h1 {
     font-size: 2.5rem;
   }
@@ -276,18 +285,18 @@
   }
 }
 .gridscontacto {
+  background-color: rgba(218, 202, 166, 0.2);
   display: grid;
   grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
-  grid-template-rows: 0.2fr 0.2fr 3fr 0.1fr;
-  grid-template-areas: "header header header header" ". titulo titulo ." ". main formulario ." ". footer footer .";
+  grid-template-rows: 0.2fr 0.2fr 6fr 0.1fr;
+  grid-template-areas: "header header header header" ". titulo titulo ." ". main formulario ." "footer footer footer footer";
 }
 .gridscontacto .headercontacto {
   grid-area: header;
-  justify-content: space-around;
 }
 .gridscontacto .titulocontacto {
   grid-area: titulo;
-  border-bottom: solid 0.1rem;
+  border-bottom: solid white 0.1rem;
 }
 .gridscontacto .maincontacto {
   grid-area: main;
@@ -304,14 +313,27 @@
 }
 .gridscontacto .formulario {
   grid-area: formulario;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(61, 126, 126, 0.5);
+  color: white;
+  border: solid white 0.1rem;
   padding: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .gridscontacto .formulario label {
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 1.8rem;
 }
 .gridscontacto .formulario legend {
   font-weight: bold;
+}
+.gridscontacto .formulario .btn-primary {
+  background-color: rgb(0, 0, 0);
+  --bs-btn-border-color: #090a0b;
+  --bs-btn-hover-border-color: #ffffff;
 }
 .gridscontacto .footercontacto {
   grid-area: footer;
@@ -319,47 +341,46 @@
 
 @media screen and (max-width: 768px) {
   .gridscontacto {
-    grid-template-rows: 0.2fr 0.2fr 2fr 0.1fr;
-  }
-  .gridscontacto .headercontacto {
-    justify-content: space-between;
+    grid-template-rows: auto;
   }
   .gridscontacto h1 {
     font-size: 3rem;
   }
   .gridscontacto .opinion1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .gridscontacto .opinion2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 500px) {
   .gridscontacto {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 0.1fr 0.5fr 1.5fr 0.1fr;
     grid-template-areas: "header" "titulo" "main" "formulario" "footer";
   }
   .gridscontacto h1 {
     font-size: 2.5rem;
   }
-  .gridscontacto h2 {
-    font-size: 2rem;
+  .gridscontacto .opinion1 {
+    font-size: 2.5rem;
+  }
+  .gridscontacto .opinion2 {
+    font-size: 2.5rem;
   }
 }
 .gridslimpiezafacial {
+  background-color: rgba(218, 202, 166, 0.2);
   display: grid;
   grid-template-rows: 0.2fr 0.4fr 1fr 1fr 0.1fr 0.1fr;
   grid-template-columns: 0.3fr 2fr 1fr 0.3fr;
-  grid-template-areas: "header header header header" ". titulo titulo ." ". incluye imagen ." ". beneficios imagen ." ". volver imagen ." ". footer footer .";
+  grid-template-areas: "header header header header" ". titulo titulo ." ". incluye imagen ." ". beneficios imagen ." ". volver imagen ." "footer footer footer footer";
 }
 .gridslimpiezafacial .headerlimpiezafacial {
   grid-area: header;
-  justify-content: space-around;
 }
 .gridslimpiezafacial .titulolimpiezafacial {
   grid-area: titulo;
-  border-bottom: solid 0.1rem;
+  border-bottom: solid white 0.1rem;
 }
 .gridslimpiezafacial .incluyelimpiezafacial {
   grid-area: incluye;
@@ -386,10 +407,7 @@
   .gridslimpiezafacial {
     grid-template-rows: 0.1fr 0.2fr 0.7fr 1fr 0.1fr 0.1fr;
     grid-template-columns: 0.3fr 1.5fr 1.5fr 0.3fr;
-    grid-template-areas: "header header header header" ". titulo titulo ." ". incluye beneficios ." ". imagen imagen ." ". volver volver ." ". footer footer .";
-  }
-  .gridslimpiezafacial .headerlimpiezafacial {
-    justify-content: space-between;
+    grid-template-areas: "header header header header" ". titulo titulo ." ". incluye beneficios ." ". imagen imagen ." ". volver volver ." "footer footer footer footer";
   }
   .gridslimpiezafacial h1 {
     font-size: 3rem;
@@ -446,18 +464,18 @@
   }
 }
 .gridsdermaplaning {
+  background-color: rgba(218, 202, 166, 0.2);
   display: grid;
   grid-template-columns: 0.3fr 1.5fr 1.5fr 1fr 0.3fr;
-  grid-template-rows: 0.1fr 0.1fr 0.5fr 0.5fr 0.1fr 0.1fr;
-  grid-template-areas: "header header header header header" ". titulo titulo titulo ." ". incluye incluye imagen ." ". beneficios contraindicaciones imagen ." ". volver volver imagen ." ". footer footer footer .";
+  grid-template-rows: 0.1fr 0.2fr 0.5fr 1fr 0.1fr 0.1fr;
+  grid-template-areas: "header header header header header" ". titulo titulo titulo ." ". incluye incluye imagen ." ". beneficios contraindicaciones imagen ." ". volver volver imagen ." "footer footer footer footer footer";
 }
 .gridsdermaplaning .headerdermaplaning {
   grid-area: header;
-  justify-content: space-around;
 }
 .gridsdermaplaning .titulodermaplaning {
   grid-area: titulo;
-  border-bottom: solid 0.1rem;
+  border-bottom: solid white 0.1rem;
 }
 .gridsdermaplaning .incluyedermaplaning {
   grid-area: incluye;
@@ -492,9 +510,6 @@
     grid-template-columns: 0.3fr 1.5fr 1.5fr 0.3fr;
     grid-template-rows: 0.1fr 0.2fr 0.5fr 0.5fr 1fr 0.1fr 0.1fr;
     grid-template-areas: "header header header header " ". titulo titulo ." ". incluye incluye ." ". beneficios contraindicaciones ." ". imagen imagen ." ". volver volver ." ". footer footer .";
-  }
-  .gridsdermaplaning .headerdermaplaning {
-    justify-content: space-between;
   }
   .gridsdermaplaning h1 {
     font-size: 3rem;
@@ -555,30 +570,39 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(232, 206, 181);
+  background-image: url(../imagenes/imangefondo3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  padding: 4rem;
+  text-shadow: 0 0 0.2em rgb(255, 253, 253);
   text-align: center;
+  padding: 2rem;
+  color: black;
+  font-size: 3.5rem;
 }
 
 h2 {
-  font-size: 3rem;
-  font-weight: bold;
-  padding: 4rem;
+  text-shadow: 0 0 0.2em rgb(255, 253, 253);
   text-align: center;
+  padding: 2rem;
+  color: black;
+  font-size: 3.5rem;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-family: "Raleway", sans-serif;
 }
 
 h4 {
-  font-size: 2.1rem;
+  font-size: 2.3rem;
   font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  padding-bottom: 1rem;
 }
 
 h5 {
@@ -586,11 +610,7 @@ h5 {
 }
 
 p {
-  font-size: 1.5rem;
-}
-
-header {
-  background-color: white;
+  font-size: 1.8rem;
 }
 
 .logo {
@@ -624,18 +644,21 @@ a {
 }
 
 footer {
-  border-top: solid 0.1rem;
   background-color: white;
 }
 footer p {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding-top: 1rem;
 }
 
 .header, .gridshome .headerhome, .gridstratamientoscorporales .headercorporales, .gridsttosfaciales .headerfaciales, .gridsnuestroespacio .headernuestroespacio, .gridscontacto .headercontacto, .gridslimpiezafacial .headerlimpiezafacial, .gridsdermaplaning .headerdermaplaning {
   display: flex;
   flex-direction: row;
+  background-color: white;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .nav-link {
@@ -643,10 +666,7 @@ footer p {
 }
 
 .gridshome {
-  background-image: url(../imagenes/imangefondo3.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: rgba(218, 202, 166, 0.2);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 0.1fr 6fr 0.1fr;
@@ -654,100 +674,68 @@ footer p {
 }
 .gridshome .headerhome {
   grid-area: header;
-  justify-content: space-around;
 }
 .gridshome .mainhome {
   grid-area: main;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10rem;
 }
 .gridshome .mainhome .textoprincipal {
   text-align: center;
-  margin-top: 5rem;
+  color: rgb(0, 0, 0);
 }
 .gridshome .titulo {
   font-family: "Oooh Baby", cursive;
-  font-size: 10rem;
+  font-size: 15rem;
+  text-shadow: 0 0 0.2em rgb(255, 253, 253);
 }
 .gridshome .subtitulo2 {
+  font-size: 3rem;
+  padding: 2rem;
+  text-align: center;
+  text-shadow: 0 0 0.2em rgb(255, 255, 255);
+}
+.gridshome .subtitulo3 {
   font-family: "Oooh Baby", cursive;
-  font-size: 3.3rem;
-  font-weight: bold;
-}
-.gridshome .imagenhome {
-  grid-area: imagen;
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-}
-.gridshome .imagenprincipal {
-  width: 53rem;
+  font-size: 4.2rem;
+  text-shadow: 0 0 0.2em rgb(255, 255, 255);
 }
 .gridshome .footerhome {
   grid-area: footer;
-  border-top: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 1rem;
 }
 .gridshome .footerhome .redeshome {
-  margin-top: 1rem;
-  padding-bottom: 1rem;
-}
-.gridshome .footerhome .copyrighthome {
-  text-align: center;
-  padding-top: 0.2rem;
-  padding-bottom: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 25%;
+  right: 0rem;
 }
 
-.iconowhatsapp {
-  width: 7rem;
-  padding-right: 2rem;
-}
-
-.iconoinstagram {
-  width: 7rem;
-  padding-right: 2rem;
-}
-
-.iconofacebook {
-  width: 7rem;
-  padding-right: 2rem;
-}
-
-.iconoubicacion {
-  width: 7rem;
-  padding-right: 2rem;
+.iconosredes, .iconoubicacion, .iconofacebook, .iconoinstagram, .iconowhatsapp {
+  width: 6.5rem;
+  padding: 1rem;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 768px) {
   .gridshome {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 1fr 2fr 0.1fr;
-    grid-template-areas: "header" "main" "imagen" "footer";
-  }
-  .gridshome .headerhome {
-    justify-content: space-between;
-  }
-  .imagenhome {
-    align-items: center;
-  }
-  .imagenhome .imagenprincipal {
-    width: 60rem;
-    height: 70rem;
+    grid-template-rows: auto;
+    grid-template-areas: "header" "main" "footer";
   }
   .textoprincipal {
     padding-bottom: 6rem;
-    border-bottom: solid 0.1rem;
   }
   .textoprincipal .titulo {
-    font-size: 8rem;
+    font-size: 10rem;
   }
   .textoprincipal .subtitulo2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
-  h2 {
-    font-size: 2rem;
-    padding: 2rem;
+  .textoprincipal .subtitulo3 {
+    font-size: 4rem;
   }
   ul li {
     font-size: 1.5rem;
@@ -756,7 +744,7 @@ footer p {
 }
 @media screen and (max-width: 500px) {
   .gridshome {
-    grid-template-rows: 0.1fr 0.5fr 1.5fr 0.1fr;
+    grid-template-rows: auto;
   }
   .footerhome {
     justify-content: space-between;
@@ -769,33 +757,30 @@ footer p {
     font-size: 1rem;
     padding: 0.2rem;
   }
-  .imagenhome {
-    align-items: center;
-  }
-  .imagenhome .imagenprincipal {
-    width: 40rem;
-    height: 50rem;
-  }
   .iconowhatsapp {
-    width: 6rem;
+    width: 5rem;
   }
   .iconoinstagram {
-    width: 6rem;
+    width: 5rem;
   }
   .iconofacebook {
-    width: 6rem;
+    width: 5rem;
   }
   .iconoubicacion {
-    width: 6rem;
+    width: 5rem;
   }
   .textoprincipal .titulo {
-    font-size: 7.5rem;
+    font-size: 8rem;
   }
   .textoprincipal .subtitulo2 {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
   }
-  h2 {
-    font-size: 1.7rem;
+  .textoprincipal .subtitulo3 {
+    font-size: 3.5rem;
+  }
+  footer p {
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
   }
 }
 @keyframes wpp {

@@ -1,6 +1,7 @@
 
 
 .gridslimpiezafacial{
+    background-color: rgba(218, 202, 166, 0.2);
     display: grid;
     grid-template-rows: 0.2fr 0.4fr 1fr 1fr 0.1fr 0.1fr;
     grid-template-columns: 0.3fr 2fr 1fr 0.3fr;
@@ -10,15 +11,14 @@
     ". incluye imagen ."
     ". beneficios imagen ."
     ". volver imagen ."
-    ". footer footer .";
+    "footer footer footer footer";
     .headerlimpiezafacial{
         grid-area: header;
         @extend .header;
-        justify-content: space-around;
     }
     .titulolimpiezafacial{
         grid-area: titulo;
-        border-bottom: solid 0.1rem;
+        border-bottom: solid white 0.1rem;
     }
     .incluyelimpiezafacial{
         grid-area: incluye;
@@ -51,10 +51,7 @@
         ". incluye beneficios ."
         ". imagen imagen ."
         ". volver volver ."
-        ". footer footer .";
-        .headerlimpiezafacial{
-            justify-content: space-between;
-        }
+        "footer footer footer footer";
         h1{
             font-size: 3rem;
         }

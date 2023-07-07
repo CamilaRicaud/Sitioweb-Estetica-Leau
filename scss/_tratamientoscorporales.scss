@@ -1,114 +1,91 @@
 
 
 .gridstratamientoscorporales{
+    background-color: rgba(218, 202, 166, 0.2);
     display: grid;
-    grid-template-columns:0.2fr 0.7fr 2fr  0.2fr;
-    grid-template-rows: 0.1fr 0.2fr 0.3fr 5fr 2fr 0.1fr 0.1fr;
+    grid-template-columns:0.2fr 2fr 0.2fr;
+    grid-template-rows: 0.1fr 0.2fr 10fr 0.2fr 3fr 0.1fr 0.1fr;
     grid-template-areas:
-    "header header header header"
-    ". titulo titulo ."
-    ". main main ."
-    ". individuales combos ."
-    ". descripcion descripcion ."
-    ". arriba arriba ."
-    ". footer footer .";
+    "header header header"
+    ". titulo ."
+    ". combos ."
+    ". titulo2 ."
+    ". individuales ."
+    ". arriba ."
+    "footer footer footer";
 
     .headercorporales{
         grid-area: header;
         @extend .header;
-        justify-content: space-around;
     }
     .titulotratamientoscorp{
         grid-area: titulo;
-        border-bottom: solid 0.1rem;
+        border-bottom: solid white 0.1rem;
     }
     .maincorporales{
-        grid-area: main;
-        border-bottom: solid 0.1rem;
-        padding: 5rem;
-        text-align: center;
-    }
-    .combostratamientoscorp{
         grid-area: combos;
-        .tratamientoscorporales{
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            padding: 2rem;
-            .promo{
-                border-bottom: ridge ;
-                }
-        }
+        border-bottom: solid white 0.1rem;
     }
-    .individualestratamientoscorp{
+    .tituloindividualescorp{
+        grid-area: titulo2;
+    }
+    .individualescorp{
         grid-area: individuales;
-        border-right: solid 0.1rem;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        .fondottosindividuales{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            border-bottom: solid 0.1rem;
-            width: 25rem;
-            height: 16rem;
-        }
-    }
-    .beneficioscorporales{
-        grid-area: descripcion;
-        border-top: solid 0.1rem;
-        text-align: center;
-        padding-top: 2rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 1rem;
     }
     .volverarriba{
         grid-area: arriba;
-        text-align: center;
-        padding-top: 1rem;
     }
     .footercorporales{
         grid-area: footer;
     }
 }
-
-
+.fondotto{
+    background-color: rgba(61, 126, 126, 0.5);
+    color: white;
+    border: solid white 0.1rem;
+    text-align: left;
+    margin: 4rem;
+    padding: 4rem;
+}
+.fondottoindividuales{
+    background-color: rgba(61, 126, 126, 0.5);
+    color: white;
+    border: solid white 0.1rem;
+    text-align: center;
+    padding: 4rem;
+    width: 30rem;
+    height: 30rem;
+    margin: 2rem;
+}
 .arriba{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 2rem;
     color: black;
+    text-align: center;
 }
 .whatsapp{
     position: fixed;
     bottom: 5rem;
     right: 3rem;
     .iconowhatsapp2{
-        animation-name: wpp;
-        animation-iteration-count: 3;
-        animation-timing-function: linear;
-        animation-duration: 2s;
+        width: 6rem;
         border-radius: 50%;
-        &:hover{
-            width: 7rem;
-        }
+    }
+    &:hover{
+        width: 7rem;
     }
 }
 
 @media screen and (max-width:768px){
     .gridstratamientoscorporales{
-        grid-template-columns:0.2fr 2fr  0.2fr;
-        grid-template-rows: 0.1fr 0.1fr 0.3fr 2.3fr 1.2fr 1fr 0.1fr 0.1fr;
-        grid-template-areas:
-        "header header header"
-        ". titulo ."
-        ". main ."
-        ". combos ."
-        ". individuales."
-        ". descripcion ."
-        ". arriba ."
-        ". footer .";
-        .headercorporales{
-            justify-content: space-between;
-        }
+        grid-template-rows: auto;
         .individualestratamientoscorp{
             border-right: none;
             border-top: solid 0.1rem;
@@ -117,37 +94,43 @@
             font-size: 3rem;
         }
         h2{
-            font-size: 2rem;
+            font-size: 3rem;
         }
         h3{
-            font-size: 1.7rem;
+            font-size: 2rem;
         }
         h4{
             font-size: 1.9rem;
         }
+        p{
+            font-size: 1.5rem;
+        }
+    }
+    .fondottoindividuales{
+        width: 25rem;
+        height: 25rem;
     }
 }
 
 @media screen and (max-width:500px){
     .gridstratamientoscorporales{
         grid-template-columns: 1fr;
-        grid-template-rows: 0.1fr 0.1fr 0.2fr 8.5fr 1.4fr 1.2fr 0.1fr 0.1fr;
-        grid-template-areas:
-        "header"
-        "titulo"
-        "main"
-        "combos"
-        "individuales"
-        "descripcion"
-        "arriba"
-        "footer";
         h1{
             font-size: 2.5rem;
         }
         h2{
-            font-size: 2rem;
+            font-size: 2.5rem;
+        }
+        h3{
+            font-size: 1.8rem;
         }
         h4{
+            font-size: 1.5rem;
+        }
+        p{
+            font-size: 1.2rem;
+        }
+        .arriba{
             font-size: 1.5rem;
         }
     }

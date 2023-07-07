@@ -1,24 +1,24 @@
 
 
 .gridsdermaplaning{
+    background-color: rgba(218, 202, 166, 0.2);
     display: grid;
     grid-template-columns: 0.3fr 1.5fr 1.5fr 1fr 0.3fr;
-    grid-template-rows: 0.1fr 0.1fr 0.5fr 0.5fr 0.1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.2fr 0.5fr 1fr 0.1fr 0.1fr;
     grid-template-areas:
     "header header header header header"
     ". titulo titulo titulo ."
     ". incluye incluye imagen ."
     ". beneficios contraindicaciones imagen ."
     ". volver volver imagen ."
-    ". footer footer footer .";
+    "footer footer footer footer footer";
     .headerdermaplaning{
         grid-area: header;
         @extend .header;
-        justify-content: space-around;
     }
     .titulodermaplaning{
         grid-area: titulo;
-        border-bottom: solid 0.1rem;
+        border-bottom: solid white 0.1rem;
     }
     .incluyedermaplaning{
         grid-area: incluye;
@@ -60,9 +60,6 @@
         ". imagen imagen ."
         ". volver volver ."
         ". footer footer .";
-        .headerdermaplaning{
-            justify-content: space-between;
-        }
         h1{
             font-size: 3rem;
         }
