@@ -3,15 +3,14 @@
 .gridslimpiezafacial{
     background-color: rgba(218, 202, 166, 0.2);
     display: grid;
-    grid-template-rows: 0.2fr 0.4fr 1fr 1fr 0.1fr 0.1fr;
-    grid-template-columns: 0.3fr 2fr 1fr 0.3fr;
+    grid-template-rows: 0.2fr 0.4fr 6fr 0.1fr 0.1fr;
+    grid-template-columns: 0.2fr 2fr 0.2fr;
     grid-template-areas:
-    "header header header header"
-    ". titulo titulo ."
-    ". incluye imagen ."
-    ". beneficios imagen ."
-    ". volver imagen ."
-    "footer footer footer footer";
+    "header header header"
+    ". titulo ."
+    ". incluye ."
+    ". volver ."
+    "footer footer footer";
     .headerlimpiezafacial{
         grid-area: header;
         @extend .header;
@@ -22,13 +21,17 @@
     }
     .incluyelimpiezafacial{
         grid-area: incluye;
-        margin-top: 2rem;
-    }
-    .beneficioslimpiezafacial{
-        grid-area: beneficios;
-    }
-    .imagenlimpiezafacial{
-        grid-area: imagen;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgba(61, 126, 126, 0.5);
+        color: white;
+        border: solid white 0.1rem;
+        padding: 3rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        width: auto;
     }
     .volveratrasfacial{
         grid-area: volver;
@@ -37,75 +40,60 @@
         grid-area: footer;
     }
 }
-.imagenfacial{
+.img-fluid{
     width: 50rem;
+    border-radius: 50%;
 }
 
 @media screen and (max-width:768px){
     .gridslimpiezafacial{
-        grid-template-rows: 0.1fr 0.2fr 0.7fr 1fr 0.1fr 0.1fr;
-        grid-template-columns: 0.3fr 1.5fr 1.5fr 0.3fr;
-        grid-template-areas:
-        "header header header header"
-        ". titulo titulo ."
-        ". incluye beneficios ."
-        ". imagen imagen ."
-        ". volver volver ."
-        "footer footer footer footer";
+        grid-template-rows: 0.1fr 0.1fr 7fr 0.1fr 0.1fr;
+        grid-template-columns: 0.1fr 2fr 0.1fr;
         h1{
             font-size: 3rem;
         }
         h3{
-            font-size: 1.7rem;
+            font-size: 2.3rem;
         }
         li{
             font-size: 1.4rem;
         }
-    }
-    .imagenlimpiezafacial{
-        @include flex-row-center;
-    }
-    .incluyelimpiezafacial{
-        margin-left: 1rem;
-    }
-    .beneficioslimpiezafacial{
-        margin-top: 2rem;
-        margin-right: 1rem;
-        border-bottom: solid 0.1rem;
+        .incluyelimpiezafacial{
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: rgba(61, 126, 126, 0.5);
+            color: white;
+            border: solid white 0.1rem;
+            padding: 3rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+            width: 70rem;
+        }
     }
     .volveratrasfacial{
         @include flex-row-center;
     }
-    .incluyelimpiezafacial{
-        border-bottom: solid 0.1rem;
-    }
+
+
 }
 @media screen and (max-width:500px){
     .gridslimpiezafacial{
-        grid-template-rows: 0.1fr 0.1fr 1.5fr 2fr 0.1fr 0.1fr;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas:
-        "header header"
-        "titulo titulo"
-        "incluye beneficios"
-        "imagen imagen"
-        "volver volver"
-        "footer footer";
+        "header"
+        "titulo"
+        "incluye"
+        "volver"
+        "footer";
         h1{
             font-size: 2.5rem;
         }
         h3{
-            font-size: 1.5rem;
+            font-size: 2.2rem;
         }
         li{
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
-    }
-    .imagenfacial{
-        width: 35rem;
-        height: 40rem;
-    }
-    .imagenlimpiezafacial{
-        align-items: center;
     }
 }

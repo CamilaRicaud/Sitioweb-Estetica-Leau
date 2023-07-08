@@ -8,7 +8,7 @@
     background-color: rgba(218, 202, 166, 0.2);
     display: grid;
     grid-template-columns: 0.2fr 1.5fr 1fr 0.2fr;
-    grid-template-rows: 0.1fr 0.2fr 1.5fr 0.2fr 1fr 0.1fr;
+    grid-template-rows: 0.1fr 0.1fr 1.5fr 0.2fr 1fr 0.1fr;
     grid-template-areas: 
     "header header header header"
     ". titulo titulo ."
@@ -33,7 +33,7 @@
         .carrusel{
             width: 50rem;
             height: 70rem;
-            padding: 3rem;
+            margin: 3rem;
         }
     }
     .tituloubicacion{
@@ -93,7 +93,7 @@
         width: 45rem;
     }
 }
-@media screen and (max-width:500px){
+@media screen and (max-width:560px){
     .gridsnuestroespacio{
         grid-template-rows: auto;
         h1{
@@ -104,12 +104,13 @@
         }
         .galeria{
             .carrusel{
-                width: 40rem;
-                height: 60rem;
+                width: auto;
+                height: auto;
             }
         }
     }
     .ubicacion2{
-        width: 38rem;
+        width: auto;
+        margin: 3rem;
     }
 }
