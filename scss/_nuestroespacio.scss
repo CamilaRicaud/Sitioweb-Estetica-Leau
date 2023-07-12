@@ -93,8 +93,11 @@
         width: 45rem;
     }
 }
+
+
 @media screen and (max-width:560px){
     .gridsnuestroespacio{
+        grid-template-columns: 1fr;
         grid-template-rows: auto;
         h1{
             font-size: 2.5rem;

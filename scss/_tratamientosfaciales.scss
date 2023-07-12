@@ -52,6 +52,7 @@
     font-weight: bold;
     font-size: 1.3rem;
     width: 10rem;
+    background-color: rgba(250, 250, 250, 0.7);
 }
 button a{
     text-decoration: none;
@@ -89,7 +90,7 @@ button a{
 @media screen and (max-width:528px){
     .gridsttosfaciales{
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: 0.1fr 0.1fr 2fr 0.1fr;
         grid-template-areas:
         "header"
         "titulo"

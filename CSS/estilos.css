@@ -1,8 +1,14 @@
+.fondos, .fondottoindividuales, .fondotto {
+  background-color: rgba(61, 126, 126, 0.5);
+  color: white;
+  border: solid white 0.1rem;
+}
+
 .gridstratamientoscorporales {
   background-color: rgba(218, 202, 166, 0.2);
   display: grid;
   grid-template-columns: 0.2fr 2fr 0.2fr;
-  grid-template-rows: 0.1fr 0.1fr auto 0.2fr 3fr 0.1fr 0.1fr;
+  grid-template-rows: 0.1fr 0.1fr auto auto 3fr 0.1fr auto;
   grid-template-areas: "header header header" ". titulo ." ". combos ." ". titulo2 ." ". individuales ." ". arriba ." "footer footer footer";
 }
 .gridstratamientoscorporales .headercorporales {
@@ -29,38 +35,27 @@
 }
 .gridstratamientoscorporales .volverarriba {
   grid-area: arriba;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
 }
 .gridstratamientoscorporales .footercorporales {
   grid-area: footer;
 }
 
 .fondotto {
-  background-color: rgba(61, 126, 126, 0.5);
-  color: white;
-  border: solid white 0.1rem;
   text-align: left;
   margin: 4rem;
   padding: 4rem;
 }
 
 .fondottoindividuales {
-  background-color: rgba(61, 126, 126, 0.5);
-  color: white;
-  border: solid white 0.1rem;
   text-align: center;
   padding: 4rem;
   width: 30rem;
   height: 30rem;
   margin: 2rem;
-}
-
-.arriba {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  font-size: 2rem;
-  color: black;
-  text-align: center;
 }
 
 .whatsapp {
@@ -71,19 +66,16 @@
 .whatsapp .iconowhatsapp2 {
   width: 6rem;
   border-radius: 50%;
+  animation-name: wpp;
+  animation-iteration-count: 3;
+  animation-timing-function: linear;
+  animation-duration: 2s;
 }
 .whatsapp .iconowhatsapp2:hover {
   width: 7rem;
 }
 
 @media screen and (max-width: 768px) {
-  .gridstratamientoscorporales {
-    grid-template-rows: auto;
-  }
-  .gridstratamientoscorporales .individualestratamientoscorp {
-    border-right: none;
-    border-top: solid 0.1rem;
-  }
   .gridstratamientoscorporales h1 {
     font-size: 3rem;
   }
@@ -118,12 +110,9 @@
     font-size: 1.8rem;
   }
   .gridstratamientoscorporales h4 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
   .gridstratamientoscorporales p {
-    font-size: 1.2rem;
-  }
-  .gridstratamientoscorporales .arriba {
     font-size: 1.5rem;
   }
   .whatsapp {
@@ -136,6 +125,17 @@
   }
   .whatsapp .iconowhatsapp2:hover {
     width: 6rem;
+  }
+}
+@keyframes wpp {
+  0% {
+    width: 6.5rem;
+  }
+  50% {
+    width: 7rem;
+  }
+  100% {
+    width: 6.5rem;
   }
 }
 .gridsttosfaciales {
@@ -186,6 +186,7 @@
   font-weight: bold;
   font-size: 1.3rem;
   width: 10rem;
+  background-color: rgba(250, 250, 250, 0.7);
 }
 
 button a {
@@ -225,7 +226,7 @@ button a {
 @media screen and (max-width: 528px) {
   .gridsttosfaciales {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 0.1fr 0.1fr 2fr 0.1fr;
     grid-template-areas: "header" "titulo" "ttosfaciales" "footer";
   }
   .gridsttosfaciales h1 {
@@ -313,6 +314,7 @@ button a {
 }
 @media screen and (max-width: 560px) {
   .gridsnuestroespacio {
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
   .gridsnuestroespacio h1 {
@@ -387,7 +389,9 @@ button a {
 
 @media screen and (max-width: 768px) {
   .gridscontacto {
+    grid-template-columns: 0.1fr 2fr 0.1fr;
     grid-template-rows: auto;
+    grid-template-areas: "header header header" ". titulo ." ". main ." ". formulario ." "footer footer footer";
   }
   .gridscontacto h1 {
     font-size: 3rem;
@@ -417,7 +421,7 @@ button a {
 .gridslimpiezafacial {
   background-color: rgba(218, 202, 166, 0.2);
   display: grid;
-  grid-template-rows: 0.2fr 0.4fr 6fr 0.1fr 0.1fr;
+  grid-template-rows: 0.2fr 0.4fr 7fr 0.1fr 0.1fr;
   grid-template-columns: 0.2fr 2fr 0.2fr;
   grid-template-areas: "header header header" ". titulo ." ". incluye ." ". volver ." "footer footer footer";
 }
@@ -444,6 +448,7 @@ button a {
 }
 .gridslimpiezafacial .volveratrasfacial {
   grid-area: volver;
+  padding: 1rem;
 }
 .gridslimpiezafacial .footerlimpiezafacial {
   grid-area: footer;
@@ -454,10 +459,20 @@ button a {
   border-radius: 50%;
 }
 
+@media screen and (max-width: 1000px) {
+  .gridslimpiezafacial .incluyelimpiezafacial {
+    flex-direction: column;
+  }
+  .volveratrasfacial {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
 @media screen and (max-width: 768px) {
   .gridslimpiezafacial {
     grid-template-rows: 0.1fr 0.1fr 7fr 0.1fr 0.1fr;
-    grid-template-columns: 0.1fr 2fr 0.1fr;
+    grid-template-columns: 0.1fr 3fr 0.1fr;
   }
   .gridslimpiezafacial h1 {
     font-size: 3rem;
@@ -467,23 +482,6 @@ button a {
   }
   .gridslimpiezafacial li {
     font-size: 1.4rem;
-  }
-  .gridslimpiezafacial .incluyelimpiezafacial {
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: rgba(61, 126, 126, 0.5);
-    color: white;
-    border: solid white 0.1rem;
-    padding: 3rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    width: 70rem;
-  }
-  .volveratrasfacial {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
   }
 }
 @media screen and (max-width: 500px) {
@@ -504,9 +502,9 @@ button a {
 .gridsdermaplaning {
   background-color: rgba(218, 202, 166, 0.2);
   display: grid;
-  grid-template-columns: 0.3fr 1.5fr 1.5fr 1fr 0.3fr;
-  grid-template-rows: 0.1fr 0.1fr 0.5fr 1fr 0.1fr 0.1fr;
-  grid-template-areas: "header header header header header" ". titulo titulo titulo ." ". incluye incluye imagen ." ". beneficios contraindicaciones imagen ." ". volver volver imagen ." "footer footer footer footer footer";
+  grid-template-columns: 0.2fr 2fr 0.2fr;
+  grid-template-rows: 0.2fr 0.4fr 9fr 0.1fr 0.1fr;
+  grid-template-areas: "header header header" ". titulo ." ". incluye ." ". volver ." "footer footer footer";
 }
 .gridsdermaplaning .headerdermaplaning {
   grid-area: header;
@@ -517,84 +515,64 @@ button a {
 }
 .gridsdermaplaning .incluyedermaplaning {
   grid-area: incluye;
-  padding-left: 3rem;
-  padding-bottom: 1rem;
-  padding-top: 3rem;
-}
-.gridsdermaplaning .beneficiosdermaplaning {
-  grid-area: beneficios;
-  padding-left: 3rem;
-}
-.gridsdermaplaning .contraindicacionesdermaplaning {
-  grid-area: contraindicaciones;
-  padding-left: 3rem;
-}
-.gridsdermaplaning .imagenesdermaplaning {
-  grid-area: imagen;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(61, 126, 126, 0.5);
+  color: white;
+  border: solid white 0.1rem;
+  padding: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: auto;
 }
 .gridsdermaplaning .volveratrasdermaplaning {
   grid-area: volver;
+  padding: 1rem;
 }
 .gridsdermaplaning .footerdermaplaning {
   grid-area: footer;
 }
 
-.imagendermaplaning {
-  width: 55rem;
-}
-
-@media screen and (max-width: 768px) {
-  .gridsdermaplaning {
-    grid-template-columns: 0.3fr 1.5fr 1.5fr 0.3fr;
-    grid-template-rows: 0.1fr 0.2fr 0.5fr 0.5fr 1fr 0.1fr 0.1fr;
-    grid-template-areas: "header header header header " ". titulo titulo ." ". incluye incluye ." ". beneficios contraindicaciones ." ". imagen imagen ." ". volver volver ." ". footer footer .";
-  }
-  .gridsdermaplaning h1 {
-    font-size: 3rem;
-  }
-  .gridsdermaplaning h3 {
-    font-size: 1.7rem;
-  }
-  .gridsdermaplaning li {
-    font-size: 1.4rem;
-  }
-  .beneficiosdermaplaning {
-    border-bottom: solid 0.1rem;
-  }
-  .contraindicacionesdermaplaning {
-    border-bottom: solid 0.1rem;
-  }
-  .imagenesdermaplaning {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+@media screen and (max-width: 1000px) {
+  .gridsdermaplaning .incluyedermaplaning {
+    flex-direction: column;
   }
   .volveratrasdermaplaning {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-  .imagendermaplaning {
-    width: 45rem;
+}
+@media screen and (max-width: 768px) {
+  .gridsdermaplaning {
+    grid-template-columns: 0.1fr 3fr 0.1fr;
+    grid-template-rows: 0.1fr 0.1fr 10fr 0.1fr 0.1fr;
+  }
+  .gridsdermaplaning h1 {
+    font-size: 3rem;
+  }
+  .gridsdermaplaning h3 {
+    font-size: 2.3rem;
+  }
+  .gridsdermaplaning li {
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 500px) {
   .gridsdermaplaning {
-    grid-template-columns: 1.5fr 1.5fr;
-    grid-template-rows: 0.2fr 0.2fr 0.5fr 0.5fr 1fr 0.1fr 0.1fr;
-    grid-template-areas: "header header" "titulo titulo" "incluye incluye" "beneficios contraindicaciones" "imagen imagen" "volver volver" "footer footer";
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "titulo" "incluye" "volver" "footer";
   }
   .gridsdermaplaning h1 {
     font-size: 2.5rem;
   }
   .gridsdermaplaning h3 {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
   .gridsdermaplaning li {
-    font-size: 1rem;
-  }
-  .imagendermaplaning {
-    width: 35rem;
+    font-size: 1.5rem;
   }
 }
 * {
@@ -709,7 +687,7 @@ footer p {
   background-color: rgba(218, 202, 166, 0.2);
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 6fr 0.1fr;
+  grid-template-rows: 0.1fr 6.5fr 0.1fr;
   grid-template-areas: "header" "main" "footer";
 }
 .gridshome .headerhome {
@@ -763,7 +741,6 @@ footer p {
 @media screen and (max-width: 768px) {
   .gridshome {
     grid-template-columns: 1fr;
-    grid-template-rows: auto;
     grid-template-areas: "header" "main" "footer";
   }
   .textoprincipal {
@@ -784,9 +761,6 @@ footer p {
   }
 }
 @media screen and (max-width: 500px) {
-  .footerhome {
-    justify-content: space-between;
-  }
   .logo {
     width: 10rem;
     height: 10rem;
@@ -821,15 +795,15 @@ footer p {
     padding-top: 0.5rem;
   }
 }
-@keyframes wpp {
-  0% {
-    width: 6rem;
+@media screen and (max-width: 350px) {
+  .textoprincipal .titulo {
+    font-size: 7.8rem;
   }
-  50% {
-    width: 7rem;
+  .textoprincipal .subtitulo2 {
+    font-size: 2rem;
   }
-  100% {
-    width: 6rem;
+  .textoprincipal .subtitulo3 {
+    font-size: 2.4rem;
   }
 }
 

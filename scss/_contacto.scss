@@ -63,7 +63,14 @@
 
 @media screen and (max-width:768px){
     .gridscontacto{
+        grid-template-columns: 0.1fr 2fr 0.1fr;
         grid-template-rows: auto;
+        grid-template-areas: 
+        "header header header"
+        ". titulo ."
+        ". main ."
+        ". formulario ."
+        "footer footer footer";
         h1{
             font-size: 3rem;
         }
